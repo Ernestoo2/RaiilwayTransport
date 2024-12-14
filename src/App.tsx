@@ -7,10 +7,10 @@ import ReviewUi from "./ui/ReviewUi";
 
 function App() {
   return (
-    <div className=" w-full h-auto   App">
+    <div className=" w-full h- bg-slate-200   App">
       <HeaderUi />
       <ReviewUi/>
-    
+
 
       
 

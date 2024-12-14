@@ -70,7 +70,7 @@ export default function CardComponent({
                 <p className="font-light text-sm text-gray-600 truncate">{description}</p>
 
                 {/* View More Link */}
-                <a className="font-medium text-[12px] text-end block mt-2 text-blue-500 hover:underline" href="#">
+                <a className="font-medium text-[12px] text-end block mt-2 text-blue-500 hover:underline" href="/src/pages/DetailedPage/">
                     View more
                 </a>
 
