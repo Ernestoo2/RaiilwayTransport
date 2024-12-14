@@ -1,17 +1,30 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class Nav extends Component {
-  render() {
-    return (
-      <div className="w-full max-w-full  py-3 mx-auto  text-black ">
-        <nav className="w-full flex  justify-evenly gap-[10px] md:gap-[10px]  h-auto   ">
-            <a className="lg:text-lg md:text-base sm:text-xs transition-colors hover:text-white" href="/">Trains Schedule </a>
-            <a className="lg:text-lg md:text-base sm:text-xs  transition-colors hover:text-white" href="/">FAQ</a>
-            <a className="lg:text-lg md:text-base sm:text-xs  transition-colors hover:text-white" href="/">HelpDesk</a>
-        </nav>
-      </div>
-    )
-  }
+export function Nav() {
+  return (
+    <div className="w-full   py-3 mx-auto text-black">
+      <nav className="flex justify-center gap-4 md:gap-[10px] h-auto">
+        <a 
+          className="text-center text-sm md:text-base lg:text-lg transition-colors hover:text-green-600" 
+          href="/"
+        >
+          Trains Schedule
+        </a>
+        <a 
+          className="text-center text-sm md:text-base lg:text-lg transition-colors hover:text-green-600" 
+          href="/"
+        >
+          FAQ
+        </a>
+        <a 
+          className="text-center text-sm md:text-base lg:text-lg transition-colors hover:text-green-600" 
+          href="/"
+        >
+          HelpDesk
+        </a>
+      </nav>
+    </div>
+  );
 }
 
-export default Nav
+export default Nav;
