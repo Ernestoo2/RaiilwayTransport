@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.imgWrap {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 20rem; /* Equivalent to h-80 */
+  background-image: var(--image-src, none);
+}
+
+.imgWrap[data-src="/public/Assets/back1.png"] {
+  --image-src: url("/public/Assets/back1.png");
+}
+
+.imgWrap[data-src="/public/Assets/back2.png"] {
+  --image-src: url("/public/Assets/back2.png");
+}
+
+.content {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  justify-items: center;
+}

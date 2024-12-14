@@ -4,6 +4,10 @@ import React, { Component } from "react";
 export class ReviewUi extends Component {
   render() {
     return (
+        <div className="w-full h-auto mx-4">
+        <h2 className="font-semibold font-serif ">Reviews</h2>
+        <p className="text-xs font-serif">What people says about Globe facilities</p>
+        
         <div className="w-full grid grid-cols-1 md:grid-cols-2 mx-auto gap-6 p-4">
         {CardData.map((card, index) => (
           <div
@@ -31,6 +35,8 @@ export class ReviewUi extends Component {
 
           </div>
         ))}
+        </div>
+        
       </div>
     )
   }
