@@ -63,7 +63,7 @@ export default function CardComponent({
     src
 }: CardProps) {
     return (
-        <div className="h-auto w-full  mx-auto bg-slate-100 shadow-md  rounded-md p-4">
+        <div className="h-auto w-full  mx-auto ">
             <div className="w-full">
                 {/* Title and Description */}
                 <h2 className="font-semibold text-lg">{title}</h2>

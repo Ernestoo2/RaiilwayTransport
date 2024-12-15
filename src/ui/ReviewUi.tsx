@@ -8,11 +8,11 @@ export class ReviewUi extends Component {
         <h2 className="font-semibold font-serif ">Reviews</h2>
         <p className="text-xs font-serif">What people says about Globe facilities</p>
         
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 mx-auto gap-6 p-4">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-[30px] lg:p-0 mx-auto gap-6 p-4">
         {CardData.map((card, index) => (
           <div
             key={card.id}
-            className='relative w-full sm:w-3/4 mx-auto'
+            className='relative w-full   mx-auto'
           >
             {/*Background div*/}
             <div

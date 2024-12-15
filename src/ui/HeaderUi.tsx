@@ -17,7 +17,7 @@ function HeaderUi() {
         <Logo />
         <Nav />
         {/* Desktop Navigation */}
-        <div className="hidden w-1/3  md:flex items-center">
+        <div className="hidden w-2/3  md:flex items-center">
           
           <Endside />
         </div>
