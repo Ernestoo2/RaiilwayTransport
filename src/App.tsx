@@ -12,7 +12,7 @@ function App() {
     <div className=" w-full h- bg-white   App">
       <HeaderUi />
 
-      <div className="p-8 ">
+      <div className="p-3 ">
         <RouteUi />
         <BackImageUi />
         <ReviewUi />
