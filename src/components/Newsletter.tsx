@@ -21,7 +21,7 @@ function Newsletter() {
     return (
         <div className="flex w-full h-48 md:w-4/5 mx-auto bg-[#CDEAE1] items-center justify-between rounded-md p-8 lg:p-12">
             <div className="w-full md:w-2/3 mb-2 md:mb-0 md:pr-12">
-                <h2 className="text-xl md:text-2xl font-bold text-[#2D3748] mb-1">
+                <h2 className="text-xl bg-fuchsia-300 md:text-2xl font-bold text-[#2D3748] mb-1">
                     Subscribe Newsletter
                 </h2>
                 <h3 className="text-lg md:text-xl font-semibold text-[#4A5568] mb-1">
