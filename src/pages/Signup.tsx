@@ -73,9 +73,9 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start justify-center min-h-screen bg-gray-50">
+    <div className="flex w-4/5 mx-auto flex-col md:flex-row items-center md:items-start justify-center min-h-screen bg-gray-50">
       {/* Image Section */}
-      <div className="w-full md:w-1/2 flex justify-center items-center py-10 md:py-0">
+      <div className="w-3/4 md:w-1/2 flex justify-center items-center py-10 md:py-0">
         <img
           src="/Assets/Signup.png"
           alt="Placeholder"
