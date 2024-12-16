@@ -1,18 +1,20 @@
+import HeaderUi from "../ui/HeaderUi";
 import React, { useState } from "react";
 import { AiOutlineEye } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+
+// import { useNavigate } from "react-router-dom";
 
 const VerifyCode: React.FC = () => {
   const [code, setCode] = useState("");
   const [showCode, setShowCode] = useState(false);
-  const navigate = useNavigate();
+//   const navigate = useNavigate();
 
   const handleVerify = () => {
     // Simulate verification logic
     if (code === "77889MGX") {
       alert("Code Verified Successfully!");
-      navigate("/dashboard"); // Redirect user after successful verification
-    } else {
+    //   navigate("/dashboard"); // Redirect user after successful verification
+    // } else {
       alert("Invalid Verification Code");
     }
   };
@@ -25,7 +27,7 @@ const VerifyCode: React.FC = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
       {/* Back to Login */}
       <button
-        onClick={() => navigate("/login")}
+        // onClick={() => navigate("/login")}
         className="self-start text-green-500 text-sm flex items-center space-x-1 mb-6"
       >
         <span>&larr;</span>
@@ -81,6 +83,12 @@ const VerifyCode: React.FC = () => {
           Verify
         </button>
       </div>
+
+
+
+
+
+    
     </div>
   );
 };
