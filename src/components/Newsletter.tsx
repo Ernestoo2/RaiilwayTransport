@@ -19,15 +19,15 @@ function Newsletter() {
     };
 
     return (
-        <div className="flex w-full  md:w-4/5 mx-auto bg-[#CDEAE1] items-center justify-between rounded-md p-8 lg:p-16">
-            <div className="w-full md:w-2/3 mb-8 md:mb-0 md:pr-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#2D3748] mb-4">
+        <div className="flex w-full h-48 md:w-4/5 mx-auto bg-[#CDEAE1] items-center justify-between rounded-md p-8 lg:p-12">
+            <div className="w-full md:w-2/3 mb-2 md:mb-0 md:pr-12">
+                <h2 className="text-xl md:text-2xl font-bold text-[#2D3748] mb-1">
                     Subscribe Newsletter
                 </h2>
-                <h3 className="text-xl md:text-2xl font-semibold text-[#4A5568] mb-4">
+                <h3 className="text-lg md:text-xl font-semibold text-[#4A5568] mb-1">
                     The Travel
                 </h3>
-                <p className="text-base md:text-lg text-[#4A5568] mb-6">
+                <p className="text-xs break-normal  md:text-sm text-[#4A5568] mb-1">
                     Get inspired! Receive travel discounts, tips and behind the scenes stories.
                 </p>
                 <div className="w-full max-w-md">

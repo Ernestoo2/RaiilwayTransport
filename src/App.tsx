@@ -1,8 +1,11 @@
 import "./App.css";
 import "./styles/Global.css";
+import BookingSuccess from "./components/BookingSuccess";
 import LandingPage from "./pages/LandingPage";
 import ReviewBookingUi from "./ui/ReviewBookingUi";
-import VerifyCode from "./components/VerifyLogin";
+import SignUp from "./pages/Signup";
+import TrainSearch from "./ui/TrainSearch";
+import VerifyCode from "./pages/VerifyLogin";
 
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -15,10 +18,11 @@ function App() {
 
         <VerifyCode/>
 
+        <SignUp/>
 
+        <BookingSuccess/>
 
-
-
+        <TrainSearch/>
      
     </div>
   );

@@ -1,4 +1,5 @@
 import BackImageUi from "../ui/BackImageUi";
+import BookingInterface from "../components/BookingInterface";
 import FooterUi from "../ui/FooterUi";
 import HeaderUi from "../ui/HeaderUi";
 import Newsletter from "../components/Newsletter";
@@ -14,6 +15,7 @@ function LandingPage() {
         <div className="p-3 ">
         <RouteUi />
         <BackImageUi />
+        <BookingInterface/>
         <ReviewUi />
         <img src="/Assets/Train.png" alt="" />
         <Newsletter/>

@@ -162,7 +162,7 @@ const ReviewBooking: React.FC = () => {
           <div className="space-y-2">
             <div className="flex justify-between items-center">
               <p className="text-gray-600 flex gap-2">
-                <img src="/Assets/Vector.png" alt="" />
+                <img src="/Assets/Vector.png" className="object-scale-down" alt="" />
                 50% off up to ₦100 | Use code <span className="font-medium">BOOKNOW</span>
               </p>
               <button
@@ -174,7 +174,7 @@ const ReviewBooking: React.FC = () => {
             </div>
             <div className="flex justify-between items-center">
               <p className="text-gray-600 flex gap-2">
-              <img src="/Assets/Vector.png" alt="" />
+              <img src="/Assets/Vector.png" className="object-scale-down" alt="" />
                 20% off | Use code <span className="font-medium">FIRSTTIME</span>
               </p>
               <button
@@ -191,15 +191,15 @@ const ReviewBooking: React.FC = () => {
         <div className="bg-white p-4 rounded-lg shadow-md">
 
           <h3 className="text-lg font-semibold flex gap-2 text-gray-800 mb-2">
-          <img src="/Assets/Vector.png" alt="" />
+          <img src="/Assets/Vector.png" className="object-scale-down" alt="" />
             Apply Code</h3>
-          <div className="flex items-center gap-4">
+          <div className="flex w-full items-center gap-4">
             <input
               type="text"
               placeholder="Enter Code"
               value={applyCode}
               onChange={(e) => setApplyCode(e.target.value)}
-              className="flex-1 border-t-0 border-x-0 border-b-2 border-gray-300  px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full border-t-0 border-x-0 border-b-2 border-gray-300  px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
             <button
               onClick={handleApplyCode}
