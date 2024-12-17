@@ -1,4 +1,3 @@
-import HeaderUi from "../ui/HeaderUi";
 import React, { useState } from "react";
 import { AiOutlineEye } from "react-icons/ai";
 

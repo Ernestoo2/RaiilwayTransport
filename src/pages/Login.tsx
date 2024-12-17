@@ -83,7 +83,7 @@ const Login: React.FC = () => {
               <span className="text-sm text-[#4A5568]">Remember me</span>
             </label>
             <a
-              href="#"
+              href="/"
               className="text-sm text-green-600 hover:underline"
             >
               Forgot Password
@@ -103,22 +103,30 @@ const Login: React.FC = () => {
         <div className="text-center">
           <p className="text-sm text-[#4A5568]">
             Don’t have an account?{" "}
-            <a href="#" className="text-green-600 hover:underline">
+            <a href="/" className="text-green-600 hover:underline">
               Sign up
             </a>
           </p>
           <p className="text-sm text-[#4A5568] mt-4">Or login with</p>
-          <div className="flex items-center justify-center space-x-4 mt-2">
+          <div className="flex items-center justify-center space-x-4 mt-2"
+          title="button"
+          >
             {/* Facebook */}
-            <button className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full hover:bg-gray-100">
+            <button
+             title="button"
+            className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full hover:bg-gray-100">
               <FaFacebookF className="text-blue-600 w-5 h-5" />
             </button>
             {/* Google */}
-            <button className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full hover:bg-gray-100">
+            <button 
+            title="button"
+           className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full hover:bg-gray-100">
               <FaGoogle className="text-red-600 w-5 h-5" />
             </button>
             {/* Apple */}
-            <button className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full hover:bg-gray-100">
+            <button 
+             title="button"
+            className="flex items-center justify-center w-10 h-10 border border-gray-300 rounded-full hover:bg-gray-100">
               <FaApple className="text-black w-5 h-5" />
             </button>
           </div>

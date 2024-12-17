@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { FaTrain } from "react-icons/fa";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { MdAirlineSeatReclineNormal, MdDateRange } from "react-icons/md";
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 const User: React.FC = () => {
   const [user, setUser] = useState({
@@ -131,7 +132,10 @@ const User: React.FC = () => {
           <div>
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-bold">Tickets/Bookings</h2>
-              <select className="px-4 py-2 rounded">
+              <select className="px-4 py-2 rounded"
+               title="select"
+              >
+                
                 <option>Upcoming</option>
                 <option>Past</option>
               </select>

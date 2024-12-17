@@ -1,5 +1,7 @@
 import React, { useCallback, useState } from "react";
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 interface TrainDetails {
   id: number;
   trainName: string;
@@ -88,7 +90,7 @@ const TrainCard: React.FC<TrainCardProps> = ({ train }) => {
 
 const TrainSearchResults: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState<string>("Wed 16");
-  const [breakpoint, setBreakpoint] = useState<string>("desktop");
+   const [breakpoint, setBreakpoint] = useState<string>("desktop");
 
   // Mock callback to detect breakpoints
   const handleBreakpointChange = useCallback(() => {

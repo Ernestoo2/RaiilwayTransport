@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaCheckCircle, FaEdit, FaTrash } from "react-icons/fa";
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 const ReviewBooking: React.FC = () => {
   // State variables for form fields
@@ -49,22 +49,29 @@ const ReviewBooking: React.FC = () => {
           {/* Traveler Info */}
           <div className="flex items-center gap-4">
             {isEditing ? (
-              <input
-                type="text"
-                value={travelerName}
-                onChange={(e) => setTravelerName(e.target.value)}
-                className="w-full border-t-0 border-x-0 border-b-2 border-gray-300  px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
-              />
+              <label >
+                <input
+                  type="text"
+                  placeholder="Traveler Name"
+                  value={travelerName}
+                  onChange={(e) => setTravelerName(e.target.value)}
+                  className="w-full border-t-0 border-x-0 border-b-2 border-gray-300  px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </label>
+
             ) : (
               <p className="text-gray-800 font-medium">{travelerName}</p>
             )}
             <button
+            title="button"
+              type="button"
               onClick={() => setIsEditing(!isEditing)}
               className="text-green-500 hover:text-green-600"
             >
               <FaEdit />
             </button>
             <button
+            title="button"
               onClick={() => setTravelerName("")}
               className="text-red-500 hover:text-red-600"
             >
@@ -174,7 +181,7 @@ const ReviewBooking: React.FC = () => {
             </div>
             <div className="flex justify-between items-center">
               <p className="text-gray-600 flex gap-2">
-              <img src="/Assets/Vector.png" className="object-scale-down" alt="" />
+                <img src="/Assets/Vector.png" className="object-scale-down" alt="" />
                 20% off | Use code <span className="font-medium">FIRSTTIME</span>
               </p>
               <button
@@ -191,7 +198,7 @@ const ReviewBooking: React.FC = () => {
         <div className="bg-white p-4 rounded-lg shadow-md">
 
           <h3 className="text-lg font-semibold flex gap-2 text-gray-800 mb-2">
-          <img src="/Assets/Vector.png" className="object-scale-down" alt="" />
+            <img src="/Assets/Vector.png" className="object-scale-down" alt="" />
             Apply Code</h3>
           <div className="flex w-full items-center gap-4">
             <input

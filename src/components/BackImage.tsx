@@ -1,6 +1,5 @@
 import "../App.css";
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
 import { IoIosSend } from "react-icons/io";
 
 interface BackImageProps {
