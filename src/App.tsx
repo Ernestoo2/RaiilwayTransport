@@ -1,17 +1,17 @@
 import "./App.css";
 import "./styles/Global.css";
-import BookingSuccess from "./components/BookingSuccess";
+import BookingSuccessUi from "./ui/BookingSuccessUi";
 import LandingPage from "./pages/LandingPage";
+import LoginUi from "./ui/LoginUi";
 import ReviewBookingUi from "./ui/ReviewBookingUi";
 import SignUp from "./pages/Signup";
 import TrainSearch from "./ui/TrainSearch";
+import UserUi from "./ui/UserUi";
 import VerifyCode from "./pages/VerifyLogin";
-
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className=" w-full h- bg-white   App">
+    <div className="w-full bg-white h- App">
       <LandingPage/>
 
         <ReviewBookingUi/>
@@ -20,7 +20,11 @@ function App() {
 
         <SignUp/>
 
-        <BookingSuccess/>
+        <LoginUi/>
+
+        <UserUi/>
+
+        <BookingSuccessUi/>
 
         <TrainSearch/>
      
@@ -29,11 +33,3 @@ function App() {
 }
 
 export default App;
-   /* <Router>
-      <Routes>
-        <Route path="/verify" element={<VerifyCode />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        
-        </Routes>
-   </Router> */

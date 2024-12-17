@@ -40,7 +40,7 @@ const SignUp: React.FC = () => {
 
     try {
       // API call to send data to the server
-      const response = await fetch("https://your-api-endpoint.com/signup", {
+      const response = await fetch("https://naijarails.onrender.com/SignUp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -73,9 +73,9 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="flex w-4/5 mx-auto flex-col md:flex-row items-center md:items-start justify-center min-h-screen bg-gray-50">
+    <div className="flex w-5/6 flex-col gap-5 mx-auto  md:flex-row items-center md:items-start justify-center min-h-screen bg-gray-50">
       {/* Image Section */}
-      <div className="w-3/4 md:w-1/2 flex justify-center items-center py-10 md:py-0">
+      <div className="w-3/4 md:w-1/2  flex justify-center items-center py-8 md:py-0">
         <img
           src="/Assets/Signup.png"
           alt="Placeholder"

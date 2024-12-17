@@ -29,7 +29,7 @@ const BookingSuccess: React.FC = () => {
     });
 
     return (
-        <div className="bg-[#FEF6E7] min-h-screen w-full flex flex-col items-center p-6">
+        <div className=" min-h-screen w-full flex flex-col items-center p-6">
             {/* Success Icon and Message */}
             <div className="text-center">
                 <div className="flex justify-center items-center mb-4">
@@ -126,7 +126,7 @@ const BookingSuccess: React.FC = () => {
                     <div className="flex justify-center items-center">
                         <div className="w-32 h-32 bg-gray-200 rounded-md flex items-center justify-center">
                             {/* Placeholder for QR Code */}
-                            <span className="text-gray-500">QR Code</span>
+                            <img src="/Assets/QRcode.png" alt="" />
                         </div>
                     </div>
                     <p className="text-sm mt-4 text-center text-[#6B7280]">
