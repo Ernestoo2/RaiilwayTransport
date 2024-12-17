@@ -11,7 +11,7 @@ function LandingPage() {
   return (
     <div>
         <HeaderUi/>
-
+          
         <div className="p-3 ">
         <RouteUi />
         <BackImageUi />

@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import { AiOutlineEye } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 // import { useNavigate } from "react-router-dom";
 
 const VerifyCode: React.FC = () => {
   const [code, setCode] = useState("");
   const [showCode, setShowCode] = useState(false);
-//   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleVerify = () => {
     // Simulate verification logic
     if (code === "77889MGX") {
       alert("Code Verified Successfully!");
-    //   navigate("/dashboard"); // Redirect user after successful verification
-    // } else {
+     navigate("/user"); // Redirect user after successful verification
+    } else {
       alert("Invalid Verification Code");
     }
   };
@@ -26,7 +27,7 @@ const VerifyCode: React.FC = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
       {/* Back to Login */}
       <button
-        // onClick={() => navigate("/login")}
+        onClick={() => navigate("/login")}
         className="self-start text-green-500 text-sm flex items-center space-x-1 mb-6"
       >
         <span>&larr;</span>
@@ -45,6 +46,7 @@ const VerifyCode: React.FC = () => {
           <input
             type={showCode ? "text" : "password"}
             value={code}
+            aria-label="submit"
             onChange={(e) => setCode(e.target.value)}
             className="peer w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
             placeholder=" "
@@ -56,6 +58,7 @@ const VerifyCode: React.FC = () => {
           </label>
           <button
             type="button"
+            aria-label="submit"
             onClick={() => setShowCode(!showCode)}
             className="absolute right-4 top-2.5 text-gray-500"
           >
