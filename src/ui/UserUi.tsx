@@ -1,13 +1,14 @@
 import FooterUi from "./FooterUi";
 import HeaderUi from "./HeaderUi";
 import React, { Component } from "react";
+import User from "../pages/User";
 
 export class UserUi extends Component {
   render() {
     return (
       <div>
         <HeaderUi/>
-        <UserUi/>
+        <User/>
         <FooterUi/>
       </div>
     )
