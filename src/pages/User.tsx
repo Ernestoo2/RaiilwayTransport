@@ -39,15 +39,15 @@ const User: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen p-6 ">
+    <div className="w-full   p-3 ">
       {/* Header Section */}
-      <div className="relative rounded-lg">
+      <div className=" w-full mx-auto   relative  rounded-lg">
         <div
-          className="h-40 bg-center bg-cover rounded-t-lg"
+          className="h-auto bg-center  bg-cover rounded-t-lg"
           style={{ backgroundImage: "url('/placeholder-cover.jpg')" }}
         ></div>
-        <div className="absolute flex flex-col items-center transform -translate-x-1/2 top-28 left-1/2">
-          <div className="w-24 h-24 overflow-hidden bg-gray-300 border-4 border-yellow-300 rounded-full">
+        <div className=" flex flex-col  justify-center items-center mx-auto    ">
+          <div className="w-24 h-24  overflow-hidden bg-gray-300 border-4 rounded-full">
             <img
               src="/placeholder-profile.jpg"
               alt="Profile"
@@ -60,28 +60,25 @@ const User: React.FC = () => {
       </div>
 
       {/* Tabs */}
-      <div className="flex justify-center mt-20 space-x-6">
+      <div className="flex justify-center mt-20 space-x-2">
         <button
           onClick={() => setActiveTab("account")}
-          className={`px-6 py-2 rounded-t-lg ${
-            activeTab === "account" ? "bg-white" : "bg-slate-100"
-          }`}
+          className={`px-3 py-2 rounded-t-lg ${activeTab === "account" ? "bg-white" : "bg-slate-100"
+            }`}
         >
           Account
         </button>
         <button
           onClick={() => setActiveTab("tickets")}
-          className={`px-6 py-2 rounded-t-lg ${
-            activeTab === "tickets" ? "bg-white" : "bg-slate-100"
-          }`}
+          className={`px-3 py-2 rounded-t-lg ${activeTab === "tickets" ? "bg-white" : "bg-slate-100"
+            }`}
         >
           Tickets/Bookings
         </button>
         <button
           onClick={() => setActiveTab("payment")}
-          className={`px-6 py-2 rounded-t-lg ${
-            activeTab === "payment" ? "bg-white" : "bg-slate-100"
-          }`}
+          className={`px-2 py-2 rounded-t-lg ${activeTab === "payment" ? "bg-white" : "bg-slate-100"
+            }`}
         >
           Payment Methods
         </button>
@@ -130,53 +127,53 @@ const User: React.FC = () => {
         {/* Tickets/Bookings Tab */}
         {activeTab === "tickets" && (
           <div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 justify-between">
               <h2 className="text-lg font-bold">Tickets/Bookings</h2>
-              <select className="px-4 py-2 rounded"
-               title="select"
-              >
-                
-                <option>Upcoming</option>
-                <option>Past</option>
+              <select className=" py-2 rounded" title="select">
+                <option value="" disabled hidden>Select a Ticket </option> {/* Placeholder */}
+                <option value="all">Ticket</option>
+                <option value="upcoming">Upcoming</option>
+                <option value="past">Past</option>
               </select>
+
             </div>
 
             <div className="mt-6">
               {tickets.map((ticket) => (
                 <div
                   key={ticket.id}
-                  className="flex items-center justify-between p-4 mb-4 rounded shadow"
+                  className="flex items-center  justify-between py-4 px-auto mb-4 rounded shadow"
                 >
                   {/* Ticket Info */}
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center pl-2 space-x-2">
                     {/* Placeholder for Airline Logo */}
-                    <div className="w-16 h-16 overflow-hidden bg-gray-200 rounded-lg">
+                    <div className="w-16 h-20   bg-gray-200 rounded-lg">
                       <img src={ticket.airlineLogo} alt="Airline Logo" className="object-cover w-full h-full" />
                     </div>
                     <div>
-                      <p className="font-bold">{ticket.departure} → {ticket.arrival}</p>
-                      <p className="text-gray-600">{ticket.time}</p>
+                      <p className="font-bold text-xs md:text-base lg:text-lg w-full  flex-wrap flex-1">{ticket.departure} → {ticket.arrival}</p>
+                      <p className="text-gray-600 text-xs md:text-base lg:text-lg">{ticket.time}</p>
 
                       {/* Additional Info */}
-                      <div className="flex items-center mt-2 space-x-4 text-sm text-gray-600">
+                      <div className="flex items-center mt-2 space-x-1  text-sm text-gray-600">
                         <div className="flex items-center">
-                          <MdDateRange className="mr-1 text-gray-500" />
-                          <p>{ticket.date}</p>
+                          <MdDateRange size={20} className="mr-1 text-gray-500" />
+                          <p className="text-xs md:text-base lg:text-lg">{ticket.date}</p>
                         </div>
                         <div className="flex items-center">
-                          <HiOutlineLocationMarker className="mr-1 text-gray-500" />
-                          <p>Gate {ticket.gate}</p>
+                          <HiOutlineLocationMarker size={20} className="mr-1 text-gray-500" />
+                          <p className="text-xs md:text-base lg:text-lg">Gate {ticket.gate}</p>
                         </div>
                         <div className="flex items-center">
-                          <MdAirlineSeatReclineNormal className="mr-1 text-gray-500" />
-                          <p>Seat {ticket.seat}</p>
+                          <MdAirlineSeatReclineNormal size={20} className="mr-1 text-gray-500" />
+                          <p className="text-xs md:text-base lg:text-lg">Seat {ticket.seat}</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Download Button */}
-                  <button className="px-4 py-2 text-white bg-green-500 rounded">Download Ticket</button>
+                  <button className="px-2 text-xs md:text-base lg:text-lg py-2 text-white bg-green-500 rounded">Download Ticket</button>
                 </div>
               ))}
             </div>
