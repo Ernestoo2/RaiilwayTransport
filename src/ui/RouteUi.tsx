@@ -62,7 +62,7 @@ export class RouteUi extends Component {
             </div>
 
             {/* Routes Display */}
-            <div className="w-full h-auto gap-[40px] flex  px-7 mx-auto my-7">
+            <div className="w-full h-auto gap-[40px] flex  flex-col  px-7 mx-auto my-7">
               {filteredData.map((card) => (
                 <Route
                   key={card.id}

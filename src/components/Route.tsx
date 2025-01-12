@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import Tripselector from "./RouteSelectors/Tripselector";
 import { FaCaretDown, FaRoute, FaTrain } from "react-icons/fa6";
+import { DateSelector } from "./RouteSelectors/DateSelector";
+import { FromToSelector } from "./RouteSelectors/FromToSelector";
+import { PassengerClassSelector } from "./RouteSelectors/PassengerClassSelector";
 
 interface TextProps {
     id: number;
@@ -11,6 +15,7 @@ interface TextProps {
     passenger: string;
     Class: string;
 }
+
 
 export const travelData: TextProps[] = [
     {
@@ -70,39 +75,16 @@ export default function Route({
     return (
         <div className="flex flex-col   gap-4 w-full">
             {/* 1. From - To */}
-            <div className="relative border border-[#79747E] p-3 rounded-md flex items-center gap-3 text-sm">
-                <span className="absolute -top-2 left-3 bg-slate-100 px-1 text-xs text-[#79747E]">
-                    From - To
-                </span>
-                <span className="font-medium">{from} - {to}</span>
-                <FaRoute className="text-[#79747E] ml-auto" />
-            </div>
+            <FromToSelector/>
 
             {/* 2. Trip */}
-            <div className="relative border border-[#79747E] p-3 rounded-md flex items-center gap-3 text-sm">
-                <span className="absolute -top-2 left-3 bg-slate-100 px-1 text-xs text-[#79747E]">
-                    Trip
-                </span>
-                <span className="font-medium">{trip}</span>
-                <FaCaretDown className="text-[#79747E] ml-auto" />
-            </div>
+            <Tripselector/>
 
             {/* 3. Depart - Return */}
-            <div className="relative border border-[#79747E] p-3 rounded-md flex items-center gap-3 text-sm">
-                <span className="absolute -top-2 left-3 bg-slate-100 px-1 text-xs text-[#79747E]">
-                    Depart - Return
-                </span>
-                <span className="font-medium">{Depart} - {Return}</span>
-            </div>
+            <DateSelector/>
 
             {/* 4. Passenger - Class */}
-            <div className="relative border border-[#79747E] p-3 rounded-md flex items-center gap-3 text-sm">
-                <span className="absolute -top-2 left-3 bg-slate-100 px-1 text-xs text-[#79747E]">
-                    Passenger - Class
-                </span>
-                <FaTrain className="text-[#79747E]" />
-                <span className="font-medium">{passenger} - {Class}</span>
-            </div>
+            <PassengerClassSelector/>
         </div>
     );
 }

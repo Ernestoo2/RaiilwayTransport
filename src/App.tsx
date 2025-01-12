@@ -5,6 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import LoginUi from "./ui/LoginUi";
 import ReviewBookingUi from "./ui/ReviewBookingUi";
 import SignUp from "./pages/Signup";
+import SkeletonScreenComponent from "./components/SkeletonScreen";
 import TrainSearch from "./ui/TrainSearch";
 import TrainSearchResult from "./pages/TrainSearchResult";
 import UserUi from "./ui/UserUi";
@@ -24,7 +25,7 @@ function App() {
         <Route path="/booking-success" element={<BookingSuccessUi />} />
         <Route path="/train-search" element={<TrainSearch />} />
         <Route path="/train-search-results" element={<TrainSearchResult />} /> {/* Add this route */}
-
+        <Route path="/place" element={<SkeletonScreenComponent />} />
       </Routes>
     </BrowserRouter>
   );

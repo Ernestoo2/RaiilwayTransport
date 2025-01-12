@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import Tripselector from "../components/RouteSelectors/Tripselector";
 import { AiOutlineEye } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { DateSelector } from "../components/RouteSelectors/DateSelector";
+import { FromToSelector } from "../components/RouteSelectors/FromToSelector";
+import { PassengerClassSelector } from "../components/RouteSelectors/PassengerClassSelector";
 
 // import { useNavigate } from "react-router-dom";
 
@@ -88,8 +92,10 @@ const VerifyCode: React.FC = () => {
 
 
 
-
-
+        <Tripselector/>
+        <FromToSelector/>
+        <DateSelector/>
+        <PassengerClassSelector/>
     
     </div>
   );

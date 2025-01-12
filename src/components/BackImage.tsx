@@ -27,7 +27,7 @@ export const BackImageData: BackImageProps[] = [
 export default function BackImage({ location, description, src }: BackImageProps) {
   return (
     <div 
-      className="imgWrap w-[50%] h-70 rounded-md mx-auto" 
+      className="imgWrap w-full h-70 rounded-md mx-auto" 
       data-src={src}
       style={{ 
         backgroundImage: `url(${src})`,
