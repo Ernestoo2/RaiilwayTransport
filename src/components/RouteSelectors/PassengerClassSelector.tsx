@@ -15,13 +15,14 @@ export const PassengerClassSelector = () => {
             >Passenger - Class</span>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full relative border border-[#79747E] p-3 rounded-md flex items-center gap-3 text-sm "
+                className="w-full relative  p-1 rounded-md flex items-center gap-3 text-sm "
             >
 
-                <FaTrain className="text-[#79747E] ml-auto" />
+                
                 <span className="font-medium">
                     {Passengers} Passenger{Passengers > 1 ? "s" : ""} - {selectedClass}
                 </span>
+                <FaTrain className="text-[#79747E] ml-auto" />
             </button>
             {isOpen && (
                 <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-md shadow-lg z-20">
@@ -35,7 +36,7 @@ export const PassengerClassSelector = () => {
                                 >
                                     -
                                 </button>
-                                <span>{Passengers}</span>
+                                <span className="px-4"> { Passengers }</span>
                                 <button
                                     onClick={() => setPassengers(Math.min(10, Passengers + 1))}
                                     className="px-3 py-1 border rounded hover:bg-gray-50 ml-2"

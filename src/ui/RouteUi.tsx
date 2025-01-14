@@ -1,24 +1,37 @@
 import "../App.css";
-import React, { Component } from "react";
-import Route, { travelData } from "../components/Route";
+import React, { Component, useState } from "react";
+import Route from "../components/Route";
 import { FaPlane, FaTrain } from "react-icons/fa6";
 
-export class RouteUi extends Component {
-  state = {
-    selectedFilter: "flights",
+import { 
+  initialTravelData,
+  TripTypes,
+  ClassTypes,
+  PassengerCount,
+  TravelFormState,
+  TravelRoute
+
+} from "../utils/types/types";
+
+export const RouteUi = () => {
+  const [selectedFilter, setSelectedFilter] = useState("flights"); 
+  const [routes, setRoutes] = useState<TravelRoute[]>(initialTravelData);
+
+  // Update a specific route based on its ID
+  const handleRouteUpdate = (id: number, updatedData: Partial<TravelRoute>) => {
+    setRoutes((prevRoutes) =>
+      prevRoutes.map((route) =>
+        route.id === id ? { ...route, ...updatedData } : route
+      )
+    );
   };
-
-  handleFilterChange = (filter: string) => {
-    this.setState({ selectedFilter: filter });
-  };
-
-  render() {
-    const { selectedFilter } = this.state;
-
-    const filteredData =
-      selectedFilter === "flights"
-        ? travelData.filter((card) => card.id === 1 || card.id === 2)
-        : travelData.filter((card) => card.id === 3 || card.id === 4);
+   
+  
+    // Filter data based on selected filter
+  const filteredData =
+  selectedFilter === "flights"
+    ? routes.filter((card) => card.id === 1 || card.id === 2)
+    : routes.filter((card) => card.id === 3 || card.id === 4);
 
     return (
       <div className="bg-container mb-36 md:mb-[100px]">
@@ -41,7 +54,7 @@ export class RouteUi extends Component {
                     ? "border border-[#79747E] bg-gray-200"
                     : "bg-gray-100"
                 }`}
-                onClick={() => this.handleFilterChange("flights")}
+                onClick={() => setSelectedFilter("flights")}
               >
                 <FaPlane className="text-[#79747E]" />
                 <span className="text-sm font-medium text-[#79747E]">Flights</span>
@@ -54,7 +67,7 @@ export class RouteUi extends Component {
                     ? "border border-[#79747E] bg-gray-200"
                     : "bg-gray-100"
                 }`}
-                onClick={() => this.handleFilterChange("stays")}
+                onClick={() => setSelectedFilter("stays")}
               >
                 <FaTrain className="text-[#79747E]" />
                 <span className="text-sm font-medium text-[#79747E]">Stays</span>
@@ -63,7 +76,7 @@ export class RouteUi extends Component {
 
             {/* Routes Display */}
             <div className="w-full h-auto gap-[40px] flex  flex-col  px-7 mx-auto my-7">
-              {filteredData.map((card) => (
+              {filteredData.map((card:any) => (
                 <Route
                   key={card.id}
                   id={card.id}
@@ -81,7 +94,7 @@ export class RouteUi extends Component {
         </div>
       </div>
     );
-  }
+  
 }
 
 export default RouteUi;

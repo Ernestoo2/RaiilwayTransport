@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { FaCaretDown } from "react-icons/fa";
+import { SelectorProps, TripTypes } from "../../utils/types/types";
 
-const Tripselector = () => {
+const Tripselector = ({value, onChange} : SelectorProps) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [selectedTrip, setselectedTrip] = useState("One-way");
 
-    const tripOptions = ["One-way", "Round-trip", "Multi-city", "Return"] 
+    const tripOptions = Object.values(TripTypes);
 
     return (
         <div className="relative border border-[#79747E] p-3 rounded-md flex items-center gap-3 text-sm">
@@ -18,8 +19,9 @@ const Tripselector = () => {
             className="w-full relative  rounded-md flex items-center gap-3 text-sm hover:boder-gray-400 transition-colors"
             >
                 
-                <span className="font-medium">{selectedTrip}</span>
-                <FaCaretDown className={`text-[#77747E] ml-auto transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}/>
+                <span className="font-medium">{value}</span>
+                <FaCaretDown className={`text-[#77747E] ml-auto transition-transform duration-200 
+                    ${isOpen ? "rotate-180" : ""}`}/>
             </button>
             {/* {dropdown menu} */}
             {isOpen && (
@@ -30,10 +32,11 @@ const Tripselector = () => {
                         <button
                         key={option}
                         onClick={() => {
-                            setselectedTrip(option)
+                            onChange(option)
                             setIsOpen(false)
                         }}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${selectedTrip === option ? "bg-gray-50 font-medium" : ""}`}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors 
+                            ${value === option ? "bg-gray-50 font-medium" : ""}`}
                         >
                             {option}
                         </button>

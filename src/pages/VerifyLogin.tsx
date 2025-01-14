@@ -92,10 +92,7 @@ const VerifyCode: React.FC = () => {
 
 
 
-        <Tripselector/>
-        <FromToSelector/>
-        <DateSelector/>
-        <PassengerClassSelector/>
+        
     
     </div>
   );
