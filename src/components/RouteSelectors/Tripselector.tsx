@@ -13,10 +13,11 @@ const Tripselector = ({value, onChange} : SelectorProps) => {
             {/* {main button } */}
             <span
                 className="absolute -top-2 left-3 bg-slate-100 px-1 text-xs text-[#79747E]"
-                >Trip</span>
+                >Trip
+            </span>
             <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="w-full relative  rounded-md flex items-center gap-3 text-sm hover:boder-gray-400 transition-colors"
+            className="relative flex items-center w-full gap-3 text-sm transition-colors rounded-md hover:boder-gray-400"
             >
                 
                 <span className="font-medium">{value}</span>
@@ -26,7 +27,7 @@ const Tripselector = ({value, onChange} : SelectorProps) => {
             {/* {dropdown menu} */}
             {isOpen && (
                 <div
-                className="absolute top-full left-0 mt-1 bg-white border-gray-200 rounded-md shadow-lg z-10 "
+                className="absolute left-0 z-10 mt-1 bg-white border-gray-200 rounded-md shadow-lg top-full "
                 >
                     {tripOptions.map((option, index) => (
                         <button
@@ -47,4 +48,4 @@ const Tripselector = ({value, onChange} : SelectorProps) => {
     )
 }
 
-export default Tripselector
+export default Tripselector;

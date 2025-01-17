@@ -13,10 +13,16 @@ export interface TravelRoute {
 
 }
 
+export interface RouteComponentProps {
+    route: TravelRoute;
+    onUpdate: (updatedRoute: Partial<TravelRoute>) => void;
+}
+
 export interface ApiResponse {
     success: boolean;
     data: TravelRoute[];
     error?: string;
+    message: string;
 }
 
 // Initial/mock data
@@ -71,10 +77,19 @@ export const TripTypes = {
     ROUND_TRIP : "Round-trip"
 } as const;
 
-export const ClassTypes = {
+export interface ClassTypes {
+    [key: string]: number;
+    Economy: number
+    Business: number
+    FirstClass: number
+    Total: number
+}
+
+export const ClassTypess = {
     ECONOMY: 'Economy',
     BUSINESS: 'Business',
-    FIRST: 'First Class'
+    FIRST: 'First Class',
+    TOTAL: "Total",
 } as const;
 
 // Utility type for passenger count
@@ -82,12 +97,13 @@ export interface PassengerCount {
     adults: number;
     children: number;
     infants: number;
+    total: number;
 }
 
 // Props types for components
 export interface RouteComponentProps {
     route: TravelRoute;
-    onUpdate: (updatedRoute: TravelRoute) => void;
+    onUpdate: (updatedRoute: Partial<TravelRoute>) => void;
 }
 
 export interface SelectorProps  {
