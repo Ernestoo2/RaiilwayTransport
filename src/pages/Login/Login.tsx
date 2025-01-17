@@ -83,7 +83,7 @@ const Login: React.FC = () => {
               <span className="text-sm text-[#4A5568]">Remember me</span>
             </label>
             <a
-              href="/"
+              href="/verify-login"
               className="text-sm text-green-600 hover:underline"
             >
               Forgot Password
@@ -103,7 +103,7 @@ const Login: React.FC = () => {
         <div className="text-center">
           <p className="text-sm text-[#4A5568]">
             Don’t have an account?{" "}
-            <a href="/" className="text-green-600 hover:underline">
+            <a href="/signup" className="text-green-600 hover:underline">
               Sign up
             </a>
           </p>

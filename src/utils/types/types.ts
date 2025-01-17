@@ -12,15 +12,28 @@ export interface TravelRoute {
    
 
 }
+export interface TrainDetails {
+    id: number;
+    trainName: string;
+    runsOn: string;
+    departureTime: string;
+    arrivalTime: string;
+    departureStation: string;
+    arrivalStation: string;
+    duration: string;
+}
+export interface TrainCardProps {
+    train: TrainDetails;
+}
 
 export interface RouteComponentProps {
     route: TravelRoute;
     onUpdate: (updatedRoute: Partial<TravelRoute>) => void;
 }
 
-export interface ApiResponse {
+export interface ApiResponse<T> {
     success: boolean;
-    data: TravelRoute[];
+    data: T;
     error?: string;
     message: string;
 }
@@ -117,3 +130,17 @@ export interface TravelFormState extends Omit<TravelRoute, 'id'> {
    
     passengerCount: PassengerCount;
 }
+
+export interface PaymentMethod {
+    id: number;
+    name: string;
+    icon: string; // URL or icon component
+    description: string;
+    isSelected: boolean;
+  }
+  
+  export interface PaymentProps {
+    methods: PaymentMethod[];
+    onMethodSelect: (id: number) => void;
+  }
+  

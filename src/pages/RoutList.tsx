@@ -3,15 +3,10 @@ import { Link } from "react-router-dom";
 
 function RouteList() {
   const routes = [
-    { path: "/", label: "Home" },
-    { path: "/review-booking", label: "Review Booking" },
-    { path: "/verify-login", label: "Verify Login" },
-    { path: "/signup", label: "Sign Up" },
-    { path: "/login", label: "Login" },
+    
     { path: "/user", label: "User Profile" },
-    { path: "/booking-success", label: "Booking Success" },
-    { path: "/train-search", label: "Train Search" },
-    { path: "/train-search-results", label: "Train Search Results" },
+    
+    
   ];
 
   const [breakpoint, setBreakpoint] = useState<"desktop" | "mobile">("desktop");

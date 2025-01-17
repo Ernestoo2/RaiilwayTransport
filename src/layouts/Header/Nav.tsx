@@ -7,21 +7,21 @@ export function Nav() {
       <nav className="flex justify-center gap-4 md:gap-16 h-auto">
         <Link
           className="text-center text-sm md:text-base lg:text-lg transition-colors hover:text-green-600" 
-          to="/"
+          to="/train-search"
         >
           Trains Schedule
         </Link>
         <Link 
           className="text-center text-sm md:text-base lg:text-lg transition-colors hover:text-green-600" 
-          to="/"
+          to="/user"
         >
-          FAQ
+          User Profile
         </Link>
         <Link
           className="text-center text-sm md:text-base lg:text-lg transition-colors hover:text-green-600" 
           to="/"
         >
-          HelpDesk
+          Home
         </Link>
       </nav>
     </div>

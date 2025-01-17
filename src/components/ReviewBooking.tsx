@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ReviewBooking: React.FC = () => {
   // State variables for form fields
@@ -119,12 +120,12 @@ const ReviewBooking: React.FC = () => {
               onChange={(e) => setNairaRailsID(e.target.value)}
               className="flex-1 border-t-0 border-x-0 border-b-2 border-gray-300  px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-            <button
+            <Link to="/verify-login"
               onClick={() => alert("Naira Rails ID Verified")}
               className="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600"
             >
               Verify
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -227,10 +228,12 @@ const ReviewBooking: React.FC = () => {
         </div>
 
         {/* Book Now Button */}
-        <button className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600">
+        <div className=" w-full flex text-center items-center mx-auto">
+        <Link to="/booking-success" className="w-full mx-auto items-center bg-green-500 text-white py-2 rounded-md hover:bg-green-600">
           Book Now
-        </button>
-        <button className="w-full text-red-500 py-2 mt-2">Cancel</button>
+        </Link>
+        </div>
+        <button className="w-full text-red-500  ">Cancel</button>
       </div>
     </div>
   );

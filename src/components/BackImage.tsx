@@ -1,6 +1,7 @@
 import "../App.css";
 import React from "react";
 import { IoIosSend } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 interface BackImageProps {
   id: number;
@@ -38,13 +39,13 @@ export default function BackImage({ location, description, src }: BackImageProps
       <div className="content ">
         <h1 className="text-white font-bold text-lg">{location}</h1>
         <p className="text-white text-sm">{description}</p>
-        <button
-          type="submit"
+        <Link
+          to="/train-search"
           className="mt-2 bg-[#8DD3BB] text-black px-2 py-2 rounded flex items-center justify-center gap-2"
         >
           <IoIosSend size={24} />
           Show Route
-        </button>
+        </Link>
       </div>
     </div>
   );

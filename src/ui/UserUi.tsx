@@ -1,7 +1,7 @@
 import FooterUi from "./FooterUi";
 import HeaderUi from "./HeaderUi";
 import React, { Component } from "react";
-import User from "../pages/User";
+import User from "../pages/UserSections/User";
 
 export class UserUi extends Component {
   render() {

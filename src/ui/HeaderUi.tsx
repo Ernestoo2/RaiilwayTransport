@@ -2,7 +2,6 @@ import Endside from "../layouts/Header/Endside";
 import Logo from "../layouts/Header/Logo";
 import Nav from "../layouts/Header/Nav";
 import React, { useState } from "react";
-import RouteList from "../pages/RoutList";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 function HeaderUi() {
@@ -46,9 +45,9 @@ function HeaderUi() {
           </div>
         )}
       </div>
-        <div>
+        {/* <div>
          <RouteList />
-        </div>
+        </div> */}
     </div>
   );
 }

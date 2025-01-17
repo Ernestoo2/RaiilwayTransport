@@ -9,17 +9,14 @@ export const RouteUi = () => {
   const [selectedFilter, setSelectedFilter] = useState<"flights" | "stays">("flights");
   const [routes, setRoutes] = useState<TravelRoute[]>([]);
   const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      const response: ApiResponse = await fetchTravelRoutes();
+      const response: ApiResponse<TravelRoute[]> = await fetchTravelRoutes();
       if (response.success) {
         setRoutes(response.data);
-      } else {
-        setErrorMessage(response.message);
-      }
+      } 
       setLoading(false);
     };
     fetchData();

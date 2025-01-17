@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BookingInterface: React.FC = () => {
   return (
@@ -54,9 +55,11 @@ const BookingInterface: React.FC = () => {
         </div>
 
         {/* Search Button */}
-        <button className="bg-green-600 text-white py-3 px-6 rounded-md hover:bg-green-700 transition">
+       <div className="w-full flex text-center items-center mx-auto">
+       <Link to="/train-search" className="bg-green-600 text-white py-3 px-6 rounded-md hover:bg-green-700 transition">
           Search for trains
-        </button>
+        </Link>
+       </div>
       </div>
 
       {/* Right Side: Image Placeholder */}
