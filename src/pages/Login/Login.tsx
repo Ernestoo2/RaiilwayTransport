@@ -24,7 +24,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col bg-fuchsia-300 md:flex-row items-center justify-between max-w-5xl w-full h-auto mx-auto p-6 rounded-lg shadow-md  ">
+    <div className="flex flex-col  md:flex-row items-center justify-between max-w-5xl w-full h-auto mx-auto p-6 rounded-lg shadow-md  ">
       {/* Left Side: Form */}
       <div className="md:w-1/2 space-y-12 h-auto">
         <h1 className="text-3xl font-bold text-[#2D3748]">Login</h1>
