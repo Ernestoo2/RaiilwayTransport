@@ -24,9 +24,9 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between max-w-5xl w-full mx-auto p-6 rounded-lg shadow-md  ">
+    <div className="flex flex-col bg-fuchsia-300 md:flex-row items-center justify-between max-w-5xl w-full h-auto mx-auto p-6 rounded-lg shadow-md  ">
       {/* Left Side: Form */}
-      <div className="md:w-1/2 space-y-6">
+      <div className="md:w-1/2 space-y-12 h-auto">
         <h1 className="text-3xl font-bold text-[#2D3748]">Login</h1>
         <p className="text-[#4A5568]">Login to access your Golobe account.</p>
 
@@ -134,10 +134,10 @@ const Login: React.FC = () => {
       </div>
 
       {/* Right Side: Image */}
-      <div className="mt-6 md:mt-0 md:ml-8 md:w-1/2">
-        <div className="w-3/4 h-64 bg-gray-300 rounded-lg flex items-center justify-center">
+      <div className="mt-4 w-full h-auto   mx-auto  md:mt-0 md:ml-8 md:w-1/2">
+        <div className="w-full h-auto  rounded-lg flex items-center justify-center">
           <img src="/Assets/Loginpic.png"
-          className="rounded-lg shadow-md"
+          className="w-2/3 md:w-full h-auto rounded-lg shadow-md"
           alt="" />
         </div>
       </div>
