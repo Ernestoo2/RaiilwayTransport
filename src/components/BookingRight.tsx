@@ -27,7 +27,7 @@ const BookingRight: React.FC = () => {
             {/* Right Section: Boarding and Billing Details */}
       <div className="w-full  space-y-6">
         {/* Boarding Details */}
-        <div className="bg-green-50 p-4 rounded-lg border-dashed border-[2px] border-[#07561A] shadow-md">
+        <div className="bg-[#07561A1A] p-4 rounded-lg border-dashed border-[2px] border-[#07561A] shadow-md">
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Boarding Details</h3>
           <p className="text-gray-600">
             <span className="font-medium">Class 2A</span> &bull; Tatkal Quota
