@@ -121,7 +121,7 @@ function LandingPage() {
     return <LandingPageSkeleton />;
   }
   return (
-    <div>
+    <div className="bg-[#F4FFF8]">
         <HeaderUi/>
           
         <div className="p-3 ">

@@ -1,5 +1,5 @@
 import FooterUi from "./FooterUi";
-import HeaderUi from "./HeaderUi";
+import Header1Ui from "./Header1Ui";
 import React, { Component } from "react";
 import TrainSearchResults from "../pages/TrainSearch/TrainSearchResult";
 
@@ -7,7 +7,7 @@ export class TrainSearch extends Component {
   render() {
     return (
       <div>
-        <HeaderUi/>
+        <Header1Ui/>
             <TrainSearchResults/>
         <FooterUi/>
       </div>

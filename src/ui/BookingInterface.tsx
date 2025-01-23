@@ -1,12 +1,12 @@
 import FooterUi from "./FooterUi";
-import HeaderUi from "./HeaderUi";
+import Header1Ui from "./Header1Ui";
 import React, { Component } from "react";
 
 export class BookingInterface extends Component {
   render() {
     return (
       <div>
-        <HeaderUi/>
+        <Header1Ui/>
         <BookingInterface/>
         <FooterUi/>
       </div>

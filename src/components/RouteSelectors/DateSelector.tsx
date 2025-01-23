@@ -47,6 +47,7 @@ export const DateSelector = () => {
                                 id="returnDate"
                                 type="date" 
                                 name="date"
+                                placeholder="07 Nov 22"
                                 value={returnDate} 
                                  onChange={(e) => {
                                      setReturnDate(new Date(e.target.value)

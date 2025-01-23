@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SignUp: React.FC = () => {
   // State variables for form fields
@@ -73,18 +74,18 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="flex w-5/6 flex-col gap-5 mx-auto  md:flex-row items-center md:items-start justify-center min-h-screen bg-gray-50">
+    <div className="flex w-5/6 flex-col bg-[#F4FFF8] gap-5 mx-auto  md:flex-row items-center  justify-center min-h-screen ">
       {/* Image Section */}
-      <div className="w-3/4 md:w-1/2  flex justify-center items-center py-8 md:py-0">
+      <div className="w-3/4 sm:w-2/3 sm: h-auto  flex justify-center items-center py-8 md:py-0">
         <img
           src="/Assets/Signup.png"
           alt="Placeholder"
-          className="rounded-lg shadow-md"
+          className="rounded-lg w-full h-full object-cover shadow-md"
         />
       </div>
 
       {/* Form Section */}
-      <div className="w-full md:w-1/2 p-8 bg-white shadow-md rounded-lg">
+      <div className="w-full md:w-1/2 p-8  shadow-md rounded-lg">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">Sign Up</h2>
         <p className="text-gray-600 mb-6">
           Let’s get you all set up so you can access your personal account.
@@ -97,7 +98,8 @@ const SignUp: React.FC = () => {
         {successMessage && <p className="text-green-500 mb-4">{successMessage}</p>}
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* First Name */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* First Name */}
           <div className="relative">
             <input
               type="text"
@@ -168,6 +170,7 @@ const SignUp: React.FC = () => {
               Phone Number
             </label>
           </div>
+          </div>
 
           {/* Password */}
           <div className="relative">
@@ -206,7 +209,7 @@ const SignUp: React.FC = () => {
           </div>
 
           {/* Agreement Checkbox */}
-          <div>
+          <div className="flex w-full items-center  ">
             <label className="flex items-center">
               <input
                 type="checkbox"
@@ -214,7 +217,10 @@ const SignUp: React.FC = () => {
                 onChange={(e) => setIsAgreed(e.target.checked)}
                 className="mr-2"
               />
-              I agree to all the Terms and Privacy Policies
+              <p className="text-xs gap-3">
+              I agree to all the <span className="text-red-600">  Terms</span> and <span className="text-red-600">Privacy Policies</span>
+              </p>
+              
             </label>
           </div>
 
@@ -228,12 +234,46 @@ const SignUp: React.FC = () => {
         </form>
 
         {/* Social Sign-Up */}
-        <div className="mt-6">
-          <p className="text-center text-gray-600">Or Sign up with</p>
-          <div className="flex justify-center space-x-4 mt-4">
-            <FaFacebook className="text-blue-600 text-2xl cursor-pointer" />
-            <FaGoogle className="text-red-600 text-2xl cursor-pointer" />
-            <FaApple className="text-black text-2xl cursor-pointer" />
+        {/* Sign-up and Social Login */}
+        <div className="text-center relative">
+          <p className="text-sm text-[#4A5568]">
+            Already have an account?{" "}
+            <Link to="/login" className="text-red-600 hover:underline">
+              Login
+            </Link>
+          </p>
+
+          {/* Divider with Text */}
+          <div className="relative w-full mt-4">
+            <div className="h-[1px] w-full bg-[#112211]" />
+            <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#F4FFF8] px-2 text-sm text-[#4A5568]">
+              Or login with
+            </p>
+          </div>
+          <div className="flex items-center justify-center space-x-4 mt-4"
+            title="button"
+          >
+            {/* Facebook */}
+            <Link
+              title="button"
+              to={"https://www.facebook.com"}
+              className="flex items-center justify-center w-24 h-10 border border-gray-300 rounded-md hover:bg-gray-100">
+              <FaFacebook className="text-blue-600 w-5 h-5" />
+            </Link>
+            {/* Google */}
+            <Link
+              title="button"
+              to={"/verify-email"}
+              className="flex items-center justify-center w-24 h-10 border border-gray-300 rounded-md hover:bg-gray-100">
+              <FaGoogle className="text-red-600 w-5 h-5" />
+            </Link>
+            {/* Apple */}
+            <Link
+              title="button"
+              to={"/verify-email"}
+              className="flex items-center justify-center w-24 h-10 border border-gray-300 rounded-md hover:bg-gray-100">
+              <FaApple className="text-black w-5 h-5" />
+            </Link>
           </div>
         </div>
       </div>

@@ -1,22 +1,12 @@
+import DateSlider from "./DateSlidder";
 import React, { useCallback, useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import { Link } from "react-router-dom";
 import { getTrainDetails } from "../../utils/api";
+import { TrainDetails } from "../../utils/types/types";
 import { TrainCard } from "./TrainCard";
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-
-interface TrainDetails {
-  id: number;
-  trainName: string;
-  runsOn: string;
-  departureTime: string;
-  arrivalTime: string;
-  departureStation: string;
-  arrivalStation: string;
-  duration: string;
-}
-
 
 
 
@@ -58,7 +48,7 @@ const TrainSearchResults: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#FEF6E7] min-h-screen w-full flex flex-col lg:flex-row">
+    <div className="bg-[#F4FFF8] min-h-screen w-full flex flex-col md:flex-row">
       {/* Left Section - Filters */}
       <div className="w-full lg:w-2/3 px-6 py-8">
         <h2 className="text-2xl font-semibold text-[#374151] mb-4">
@@ -76,28 +66,13 @@ const TrainSearchResults: React.FC = () => {
               <p className="text-sm text-[#6B7280]">LJN, Lucknow Junction</p>
             </div>
           </div>
-          <div className="w-full mt-4 items-center mx-auto ">
-          <Link to="/booking-success" className="w-full  py-2 px-4 bg-[#16A34A]  text-white  rounded-md text-sm font-medium">
-            Search for trains
-          </Link>
+          <div className="w-full h-auto flex text-center mt-4 items-center mx-auto ">
+            <Link to="/booking-success" className="w-full  py-2 px-4 bg-[#16A34A]  text-white  rounded-md text-sm font-medium">
+              Search for trains
+            </Link>
           </div>
         </div>
-        <div className="flex justify-between items-center mb-4">
-          {["Tue 15", "Wed 16", "Thu 17", "Fri 18", "Sat 19", "Sun 20"].map(
-            (date) => (
-              <button
-                key={date}
-                className={`text-sm rounded-md px-2 py-1 ${selectedDate === date
-                    ? "bg-[#16A34A] text-white"
-                    : "text-[#374151] bg-white"
-                  }`}
-                onClick={() => handleDateChange(date)}
-              >
-                {date}
-              </button>
-            )
-          )}
-        </div>
+        <DateSlider/>
         <div className="mb-6">
           <img
             src="/Assets/Searchpic.png"

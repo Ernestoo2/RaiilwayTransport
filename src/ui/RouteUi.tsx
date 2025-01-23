@@ -48,7 +48,7 @@ export const RouteUi = () => {
   const randomRoute = getRandomRoute();
 
   return (
-    <div className="bg-container mb-36 md:mb-[100px]">
+    <div className="bg-container  mb-36 md:mb-[100px]">
       {/* Hero Content */}
       <div className="hero-content">
         <h2 className="text-2xl md:text-3xl mb-2">Helping Others</h2>
@@ -60,7 +60,7 @@ export const RouteUi = () => {
       <div className="route-container md:pb-[-150px] px-[20px]">
         <div className="w-full bg-slate-100 flex rounded shadow-md shadow-slate-600 flex-col">
           {/* Filter Buttons */}
-          <div className="flex justify-center items-center gap-4 mt-4">
+          <div className="flex mx-5  sm:pr-11 sm:mx-20  gap-4 mt-4">
             {/* Flights Button */}
             <div
               className={`flex items-center gap-2 px-4 py-2 rounded-full cursor-pointer ${
@@ -91,7 +91,7 @@ export const RouteUi = () => {
           {loading ? (
             <div className="w-full h-auto text-center my-7">Loading...</div>
           ) : randomRoute ? (
-            <div className="w-full h-auto px-7 mx-auto my-7">
+            <div className="w-full   justify-center h-auto px-7 mx-auto my-7">
               <Route
                 key={randomRoute.id}
                 route={randomRoute}

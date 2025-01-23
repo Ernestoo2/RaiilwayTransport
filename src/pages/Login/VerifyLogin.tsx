@@ -1,19 +1,17 @@
 import React, { useState } from "react";
-import { AiOutlineEye } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
-const VerifyCode: React.FC = () => {
+const VerifyLogin: React.FC = () => {
   const [code, setCode] = useState("");
-  const [showCode, setShowCode] = useState(false);
   const navigate = useNavigate();
 
   const handleVerify = () => {
     // Simulate verification logic
-    if (code === "77889MGX") {
-      alert("Code Verified Successfully!");
-     navigate("/user"); // Redirect user after successful verification
+    if (code === "1234") {
+      alert("Verification successful!");
+      navigate("/set-password"); // Redirect back to login page
     } else {
-      alert("Invalid Verification Code");
+      alert("Invalid verification code. Please try again.");
     }
   };
 
@@ -22,29 +20,28 @@ const VerifyCode: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
-      {/* Back to Login */}
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#F4FFF8] p-4">
+      {/* Back to Forget Password */}
       <button
-        onClick={() => navigate("/login")}
+        onClick={() => navigate("/forget-password")}
         className="self-start text-green-500 text-sm flex items-center space-x-1 mb-6"
       >
         <span>&larr;</span>
-        <span>Back to login</span>
+        <span>Back to Forgot Password</span>
       </button>
 
-      {/* Verify Code Section */}
-      <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">Verify code</h2>
+      {/* Verify Login Section */}
+      <div className="w-full max-w-md p-6 rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold text-gray-800 mb-2">Verify Your Login</h2>
         <p className="text-gray-600 mb-6">
-          An authentication code has been sent to your email.
+          We’ve sent a verification code to your email. Enter the code below to verify and reset your password.
         </p>
 
         {/* Enter Code */}
-        <div className="relative mb-4">
+        <div className="relative mb-6">
           <input
-            type={showCode ? "text" : "password"}
+            type="text"
             value={code}
-            aria-label="submit"
             onChange={(e) => setCode(e.target.value)}
             className="peer w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
             placeholder=" "
@@ -52,16 +49,8 @@ const VerifyCode: React.FC = () => {
           <label
             className="absolute left-4 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-600"
           >
-            Enter Code
+            Enter Verification Code
           </label>
-          <button
-            type="button"
-            aria-label="submit"
-            onClick={() => setShowCode(!showCode)}
-            className="absolute right-4 top-2.5 text-gray-500"
-          >
-            <AiOutlineEye className="text-xl" />
-          </button>
         </div>
 
         {/* Resend Code */}
@@ -69,9 +58,9 @@ const VerifyCode: React.FC = () => {
           Didn’t receive a code?{" "}
           <button
             onClick={handleResend}
-            className="text-green-500 hover:underline"
+            className="text-red-600 hover:underline"
           >
-            Resend
+            Resend Code
           </button>
         </p>
 
@@ -83,15 +72,8 @@ const VerifyCode: React.FC = () => {
           Verify
         </button>
       </div>
-
-
-
-        
-    
     </div>
   );
 };
 
-export default VerifyCode;
-
- 
+export default VerifyLogin;

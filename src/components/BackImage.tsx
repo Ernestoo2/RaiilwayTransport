@@ -28,12 +28,14 @@ export const BackImageData: BackImageProps[] = [
 export default function BackImage({ location, description, src }: BackImageProps) {
   return (
     <div 
-      className="imgWrap w-full h-70 rounded-md mx-auto" 
+      className="imgWrap w-full cursor-pointer    h-70 rounded-md mx-auto" 
       data-src={src}
       style={{ 
         backgroundImage: `url(${src})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
+        cursor: 'pointer',
+          // transition effect for background image change on hover
       }}
     >
       <div className="content ">

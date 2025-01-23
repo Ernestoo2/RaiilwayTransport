@@ -12,10 +12,13 @@ export interface TravelRoute {
    
 
 }
+
 export interface TrainDetails {
     id: number;
     trainName: string;
     runsOn: string;
+    startDate: string,
+    endDate: string,
     departureTime: string;
     arrivalTime: string;
     departureStation: string;
