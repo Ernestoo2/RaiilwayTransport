@@ -1,21 +1,23 @@
 import FooterUi from "./FooterUi";
 import Header1Ui from "./Header1Ui";
-import HeaderUi from "./HeaderUi";
-import React, { Component } from "react";
+import React from "react";
 import ReviewBooking from "../components/ReviewBooking";
+import { TrainDetails } from "../utils/types/types";
 
-export class ReviewBookingUi extends Component {
-  render() {
-    return (
-      <div>
-        <Header1Ui/>
-
-        <ReviewBooking/>
-
-        <FooterUi/>
-      </div>
-    )
-  }
+interface ReviewBookingProps {
+  train: TrainDetails;
 }
 
-export default ReviewBookingUi
+const ReviewBookingUi: React.FC<ReviewBookingProps> = ({train}) => { // Use a functional component
+ 
+  return (
+    <div>
+      <Header1Ui />
+      <ReviewBooking train={train} /> {/* Pass the train prop here */}
+      <FooterUi />
+    </div>
+  );
+};
+
+export default ReviewBookingUi;
+

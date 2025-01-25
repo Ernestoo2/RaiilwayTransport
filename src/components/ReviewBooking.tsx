@@ -1,10 +1,13 @@
 import BookingLeft from "./BookingLeft";
-import BookingRight from "./BookingRight";
-import React, { useState } from "react";
-import { FaEdit, FaTrash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import React from "react";
+import { TrainDetails } from "../utils/types/types";
+import { BookingRight } from "./BookingRight";
 
-const ReviewBooking: React.FC = () => {
+interface ReviewBookingProps {
+  train: TrainDetails;
+}
+
+const ReviewBooking: React.FC<ReviewBookingProps> = ({train}) => {
  
 
   return (
@@ -14,7 +17,7 @@ const ReviewBooking: React.FC = () => {
       <BookingLeft/>
 
       {/* Right Section: Boarding and Billing Details */}
-      <BookingRight/>
+      <BookingRight train={train}/>
     </div>
   );
 };

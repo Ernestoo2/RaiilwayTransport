@@ -50,13 +50,14 @@ const BookingInterface: React.FC = () => {
           </div>
           <div >
             <label htmlFor="date" className="block text-[#4A5568] font-medium">
-
+              
             </label>
             <input
               type="date"
               id="date"
+              value={new Date().toISOString().split("T")[0]}
               placeholder="Wed, 16 Nov 2022"
-              className="w-full border-b-2 border-x-0 border-t-0 focus:outline-none focus:border-green-600"
+              className="w-full border-b-2 text-gray-500 border-x-0 border-t-0 focus:outline-none focus:border-green-600"
             />
           </div>
         </div>

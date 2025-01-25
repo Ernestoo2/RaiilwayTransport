@@ -2,57 +2,7 @@ import { Link } from "react-router-dom";
 import { TrainDetails } from "../../utils/types/types";
 
   
- export const trainsData: TrainDetails[] = [
-    {
-      id: 1,
-      trainName: "12430 - PH ENUGU",
-      runsOn: "Everyday",
-      departureTime: "11:25 pm",
-      startDate: "Nov 16",
-      endDate: "Nov 17",
-      arrivalTime: "7:25 am",
-      departureStation: "Port Harcourt, Rivers",
-      arrivalStation: "Enugu, Enugu",
-      duration: "8 hours",
-    },
-    {
-      id: 2,
-      trainName: "12320 - EBLE",
-      runsOn: "Everyday",
-      departureTime: "11:25 pm",
-      arrivalTime: "7:25 am",
-      startDate: "Nov 16",
-      endDate: "Nov 17",
-      departureStation: "Port Harcourt, Rivers",
-      arrivalStation: "Enugu, Enugu",
-      duration: "8 hours",
-    },
-    {
-      id: 3,
-      trainName: "12320 - EBLE",
-      runsOn: "Everyday",
-      departureTime: "11:25 pm",
-      startDate: "Nov 16",
-      endDate: "Nov 17",
-      arrivalTime: "7:25 am",
-      departureStation: "Port Harcourt, Rivers",
-      arrivalStation: "Enugu, Enugu",
-      duration: "8 hours",
-    },
-    {
-      id: 4,
-      trainName: "12320 - EBLE",
-      runsOn: "Everyday",
-      startDate: "Nov 16",
-      endDate: "Nov 17",
-      departureTime: "11:25 pm",
-      arrivalTime: "7:25 am",
-      departureStation: "Port Harcourt, Rivers",
-      arrivalStation: "Enugu, Enugu",
-      duration: "8 hours",
-    },
-  ];
-  
+
 export interface TrainCardProps {
     train: TrainDetails;
   }

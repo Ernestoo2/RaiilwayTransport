@@ -13,13 +13,14 @@ import VerifyUI from "./ui/VerifyUI";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ForgetPasswordUi } from "./ui/ForgetPasswordUi";
 import { SetPasswordUi } from "./ui/SetPassWordUi";
+import { trainData } from "./utils/api";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/review-booking" element={<ReviewBookingUi />} />
+        <Route path="/review-booking" element={<ReviewBookingUi train={trainData[0]} />} />
         <Route path="/verify-login" element={<VerifyUI />} />
         <Route path="/verify-email /set-password" element={<VerifyEmail />} />
         <Route path="/set-password" element={<SetPasswordUi />} />
