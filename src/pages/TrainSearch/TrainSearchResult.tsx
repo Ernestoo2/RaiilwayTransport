@@ -48,7 +48,7 @@ const TrainSearchResults: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#F4FFF8] min-h-screen w-full flex flex-col md:flex-row">
+    <div className="bg-[#F5F5F5] min-h-screen w-full flex flex-col md:flex-row">
       {/* Left Section - Filters */}
       <div className="w-full lg:w-2/3 px-6 py-8">
         <h2 className="text-2xl font-semibold text-[#374151] mb-4">
@@ -96,9 +96,11 @@ const TrainSearchResults: React.FC = () => {
       </div>
 
       {/* Right Section - Train List */}
-      <div className="w-full lg:w-2/3 px-6 py-8 bg-white overflow-y-auto">
+      <div className="w-full lg:w-2/3 px-6 py-8 bg-[#F5F5F5] overflow-y-auto">
         <div className=" justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-[#374151]">Available Trains</h2>
+          <hr className="w-full h-1 bg-[#80808080]" />
+                  
           {loading ? (
             Array.from({ length: 5 }).map((_, index) => (
               <Skeleton key={index} height={120} className="mb-4" />

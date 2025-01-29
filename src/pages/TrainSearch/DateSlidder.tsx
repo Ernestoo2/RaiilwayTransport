@@ -34,7 +34,7 @@ const DateSlider: React.FC = () => {
        
       </button>
 
-      <div className="w-full  flex space-x-2">
+      <div className="w-full overflow-auto  flex space-x-2">
         {dates.slice(startIndex, startIndex + visibleCount).map((date) => (
           <button
             key={date}

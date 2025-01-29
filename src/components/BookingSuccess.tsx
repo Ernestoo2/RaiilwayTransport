@@ -68,41 +68,40 @@ const BookingSuccess: React.FC = () => {
                     {/* Date and Locations */}
                     <div className="flex justify-between mt-4">
                         <div>
-                            <p className="text-sm font-medium">{ticketDetails.date.departure}</p>
-                            <p className="text-sm">{ticketDetails.time.departure}</p>
-                            <p className="text-sm">{ticketDetails.locations.departure}</p>
+                            <p className="text-xs sm:text-sm md:text-base font-medium">{ticketDetails.date.departure}</p>
+                            <p className="text-xs sm:text-sm md:text-base">{ticketDetails.time.departure}</p>
+                            <p className="text-xs sm:text-sm md:text-base">{ticketDetails.locations.departure}</p>
                         </div>
                         <div className="flex flex-col items-center">
-                            <span className="text-sm text-[#9CA3AF]">8 hours</span>
+                            <span className="text-xs sm:text-sm md:text-base text-[#9CA3AF]">8 hours</span>
                             <hr className="border-t border-[#D1D5DB] w-24 mt-2" />
                         </div>
                         <div className="text-right">
-                            <p className="text-sm font-medium">{ticketDetails.date.arrival}</p>
-                            <p className="text-sm">{ticketDetails.time.arrival}</p>
-                            <p className="text-sm">{ticketDetails.locations.arrival}</p>
+                            <p className="text-xs sm:text-sm md:text-basefont-medium">{ticketDetails.date.arrival}</p>
+                            <p className="text-xs sm:text-sm md:text-base">{ticketDetails.time.arrival}</p>
+                            <p className="text-xs sm:text-sm md:text-base">{ticketDetails.locations.arrival}</p>
                         </div>
                     </div>
 
                     {/* Email and Traveller Details */}
                     <div className="flex justify-between items-center">
                         <p className="text-sm font-medium mt-6">E-Tickets has been sent to:</p>
-                        <p className="text-sm pt-4 text-right whitespace-pre-line">{ticketDetails.email}</p>
+                        <p className="text-xs sm:text-sm md:text-base pt-4 text-right whitespace-pre-line">{ticketDetails.email}</p>
 
                     </div>
 
-                    <div className="mt-6">
+                    <div className="mt-6 ">
                         <h3 className="text-lg  font-medium">Traveller Details</h3>
                         <span className=" ">
                             <p className="text-sm ">{ticketDetails.traveller.name}</p>
                         </span>
 
-                        <div className="flex justify-between">
+                        <div className="flex flex-col sm:flex-row justify-between">
                             <div className="">
                                 <span className="flex text-xs sm:text-sm md:text-base space-x-2">
                                     <p className="">Age: </p>
                                     <p >{ticketDetails.traveller.age}</p>
                                 </span>
-
                                 <span className="flex text-xs sm:text-sm md:text-base space-x-2">
                                     <p className="">Gender: </p>
                                     <p>{ticketDetails.traveller.gender}</p>
@@ -113,13 +112,11 @@ const BookingSuccess: React.FC = () => {
                             <div className="text-right">
                                 <span className="flex  space-x-2">
                                     <p className="text-xs sm:text-sm md:text-base">Booking Status: </p>
-                                     <p className="text-xs sm:text-sm md:text-base">{ticketDetails.traveller.status}</p>
+                                    <p className=" text-xs sm:text-sm md:text-base">{ticketDetails.traveller.status}</p>
                                 </span>
-
-
                                 <span className=" flex  space-x-2 ">
-                                    <p className="text-xs sm:text-sm md:text-base ">Seat/Coach No.:</p>
-                                     <p className="text-xs sm:text-sm md:text-base">{ticketDetails.traveller.seat}</p>
+                                    <p className="text-xs sm:text-sm md:text-base ">Seat/Coach No:</p>
+                                    <p className=" text-xs sm:text-sm md:text-base">{ticketDetails.traveller.seat}</p>
                                 </span>
                             </div>
                         </div>

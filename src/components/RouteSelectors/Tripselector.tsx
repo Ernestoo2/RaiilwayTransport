@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaCaretDown } from "react-icons/fa";
 import { SelectorProps, TripTypes } from "../../utils/types/types";
 
 const Tripselector = ({value, onChange} : SelectorProps) => {
     const [isOpen, setIsOpen] = React.useState(false);
-    const [selectedTrip, setselectedTrip] = useState("One-way");
-
+  
     const tripOptions = Object.values(TripTypes);
 
     return (

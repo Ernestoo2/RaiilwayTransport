@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { randomFill } from "crypto";
 import { FaRoute } from "react-icons/fa";
 
 export const FromToSelector = () => {
@@ -16,7 +15,6 @@ export const FromToSelector = () => {
              [cityOptions[i], cityOptions[j]] = [cityOptions[j], cityOptions[i]]; } 
              return cityOptions;
             } 
-    const shuffledCities = shuffleArray([...cityOptions]);
     const shuffledCity = shuffleArray([...cityOptions]);
     return (
         <div className="relative border border-[#79747E] p-3 rounded-md flex items-center gap-3 text-sm">

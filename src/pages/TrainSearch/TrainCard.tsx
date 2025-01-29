@@ -9,7 +9,7 @@ export interface TrainCardProps {
   
 export const TrainCard: React.FC<TrainCardProps> = ({ train }) => {
   return (
-    <div className="border-b bg-white my-5 px-4 rounded-md shadow-md border-[#D1D5DB] py-4">
+    <div className="border-b  my-5 px-4 rounded-md bg-white shadow-md border-[#D1D5DB] py-4">
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold">{train.trainName}</h3>
         <Link to="/review-booking" className="text-sm text-[#16A34A] hover:underline">

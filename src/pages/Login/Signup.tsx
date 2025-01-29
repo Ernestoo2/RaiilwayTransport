@@ -74,13 +74,13 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div className="flex w-5/6 flex-col bg-[#F4FFF8] gap-5 mx-auto  md:flex-row items-center  justify-center min-h-screen ">
+    <div className="flex w-5/6 flex-col   gap-5 mx-auto  md:flex-row items-center  justify-center min-h-screen ">
       {/* Image Section */}
       <div className="w-3/4 sm:w-2/3 sm: h-auto  flex justify-center items-center py-8 md:py-0">
         <img
           src="/Assets/Signup.png"
           alt="Placeholder"
-          className="rounded-lg w-full h-full object-cover shadow-md"
+          className="rounded-lg w-3/4 h-full object-cover shadow-md"
         />
       </div>
 

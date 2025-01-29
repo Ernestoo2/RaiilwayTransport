@@ -1,6 +1,6 @@
-import Endside from "../layouts/Header/Endside";
-import Logo from "../layouts/Header/Logo";
-import Nav from "../layouts/Header/Nav";
+import Endside from "../../layouts/Header/Endside";
+import Logo from "../../layouts/Header/Logo";
+import Nav from "../../layouts/Header/Nav";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -12,7 +12,7 @@ function HeaderUi() {
   };
 
   return (
-    <div className="w-full h-auto max-w-full px-4 py-2 mx-auto shadow relative">
+    <div className="w-full h-auto max-w-full px-4 py-2  mx-auto shadow relative">
       <div>
         <div className="flex items-center ">
           <Logo />
@@ -34,18 +34,18 @@ function HeaderUi() {
               {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
-          
+
         </div>
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-50">
-            
+          <div className="md:hidden absolute top-full left-0 w-full bg-[#F4FFF8] shadow-lg z-50">
+
             <Endside />
           </div>
         )}
       </div>
-        {/* <div>
+      {/* <div>
          <RouteList />
         </div> */}
     </div>

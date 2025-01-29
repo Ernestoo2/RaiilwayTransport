@@ -1,10 +1,10 @@
 import BackImageUi from "../ui/BackImageUi";
 import BookingInterface from "../components/BookingInterface";
-import FooterUi from "../ui/FooterUi";
-import HeaderUi from "../ui/HeaderUi";
+import FooterUi from "../ui/Footer/FooterUi";
+import HeaderUi from "../ui/Header/HeaderUi";
 import Newsletter from "../components/Newsletter";
 import React, { useEffect, useState } from "react";
-import ReviewUi from "../ui/ReviewUi";
+import ReviewUi from "../ui/Trains/ReviewUi";
 import RouteUi from "../ui/RouteUi";
 import Skeleton from "react-loading-skeleton";
 
@@ -122,18 +122,18 @@ function LandingPage() {
   }
   return (
     <div className="bg-[#F4FFF8]">
-        <HeaderUi/>
-          
-        <div className="p-3 ">
+      <HeaderUi />
+
+      <div className="p-3 ">
         <RouteUi />
         <BackImageUi />
-        <BookingInterface/>
+        <BookingInterface />
         <ReviewUi />
         <img src="/Assets/Train.png" alt="" />
-        <Newsletter/>
+        <Newsletter />
 
       </div>
-      <FooterUi/>
+      <FooterUi />
     </div>
   )
 }
