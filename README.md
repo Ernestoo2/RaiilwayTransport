@@ -29,6 +29,7 @@ The application addresses core challenges in transportation management by provid
 The project follows a **React TypeScript Template Structure** for modularity and maintainability. Below is the folder breakdown:
 
 ### **`src/` Folder** (Core Application Files)
+
 - **`components/`** - Reusable UI components like buttons, forms, and loaders.
 - **`layout/`** - Manages overall page layout (header, footer, navigation).
 - **`pages/`** - Contains main application pages (Landing Page, Login, Train Search).
@@ -38,10 +39,12 @@ The project follows a **React TypeScript Template Structure** for modularity and
 - **`App.tsx`** - Entry point where routes and core logic are defined.
 
 ### **`public/` Folder** (Static Files)
+
 - **`index.html`** - Root HTML template for the React application.
 - **`assets/`** - Stores images, icons, and other static resources.
 
 ### **Other Key Files**
+
 - **`package.json`** - Manages dependencies and scripts.
 - **`node_modules/`** - Stores installed dependencies.
 
@@ -60,6 +63,7 @@ The project follows a **React TypeScript Template Structure** for modularity and
 ## How It Works ⚙️
 
 ### **Key Functionalities**
+
 1. **Landing Page**: Displays routes, booking forms, and reviews with skeleton loaders for smooth loading.
 2. **Train Search**: Users can search for trains based on preferences and view available options.
 3. **Booking Process**: Intuitive interface for booking, reviewing, and confirming tickets.
@@ -85,24 +89,29 @@ The **Transport System Application** revolutionizes transportation management by
 Follow these steps to set up and run the application on your local machine:
 
 ### **1. Clone the Repository**
+
 ```bash
 git clone https://github.com/your-repo-name/transport-system.git
 cd transport-system
 ```
 
 ### **2. Install Dependencies**
+
 ```bash
 npm install
 ```
 
 ### **3. Start the Development Server**
+
 ```bash
 npm start
 ```
 
 ### **4. Open in Browser**
+
 Visit:
-```
+
+```bash
 http://localhost:3000
 ```
 
@@ -118,6 +127,7 @@ http://localhost:3000
 ---
 
 ## Contact 📩
+
 For any inquiries, feedback, or suggestions, reach out:
 
 **Eze Ernest Chibueze**  
