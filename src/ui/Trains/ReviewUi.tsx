@@ -1,14 +1,6 @@
-import CardComponent, { CardData } from "../../components/CardComponent";
 import CardComponent from "../../components/CardComponent";
-import React, { Component } from "react";
 import { Component } from "react";
 import { CardData } from "../../components/constants";
-
-<<<<<<< HEAD
-=======
->>>>>>> c5ac88b (Trials)
-
-// import CardComponent, { CardData } from "../components/CardComponent";
 
 export class ReviewUi extends Component {
   render() {

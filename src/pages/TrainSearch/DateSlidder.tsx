@@ -11,7 +11,7 @@ const DateSlider: React.FC<DateSliderProps> = ({ onDateChange }) => {
   const [startIndex, setStartIndex] = useState<number>(0);
   const visibleCount = 8; // Number of dates visible at a time
 
-  const handleDateChange = (date: string) => {
+ const handleDateChange = (date: string) => {
     setSelectedDate(date);
     onDateChange(date);
 

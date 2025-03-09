@@ -55,7 +55,8 @@ const TrainSearchResults: React.FC = () => {
     fetchData();
   }, []);
 
-  
+
+ 
 
   return (
     <div className="bg-[#F5F5F5] min-h-screen w-full flex flex-col md:flex-row">
@@ -64,6 +65,7 @@ const TrainSearchResults: React.FC = () => {
         <h2 className="text-2xl font-semibold text-[#374151] mb-4">
           Your Search Results
         </h2>
+
         <div className="mb-6 flex flex-col">
           <div className="flex gap-6 items-center">
             <div className="border-t-0 border-x-0 border-b-2 border-[#D1D5DB] p-4">

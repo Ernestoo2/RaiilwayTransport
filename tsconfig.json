@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "compilerOptions": {
     "moduleResolution": "node",
     
@@ -26,11 +25,5 @@
   },
   "include": [
     "src"
-=======
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
->>>>>>> c5ac88b (Trials)
   ]
 }
