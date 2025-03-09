@@ -65,11 +65,9 @@ const BookingLeft: React.FC = () => {
           <p className="text-sm text-gray-600">
             As per IRCTC guidelines, you can book up to 6 travelers at once.
           </p>
-<<<<<<< HEAD
-          <img src="/Assets/plussign.png" className="object-scale-down w-10 h-10" alt="" />
-=======
+
           <img src="../Assets/plussign.png" className="object-scale-down w-10 h-10" alt="" />
->>>>>>> c5ac88b (Trials)
+
         </div>
 
         <ol className="space-y-4">

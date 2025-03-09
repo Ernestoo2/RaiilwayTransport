@@ -33,7 +33,7 @@ const useBreakpoint = (): Breakpoint => {
 };
 
 const TrainSearchResults: React.FC = () => {
-  const [ setSelectedDate] = useState<string>("Wed 16");
+  const [selectedDate, setSelectedDate] = useState<string>("Wed 16");
   const [trainDetails, setTrainDetails] = useState<TrainDetails[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -56,7 +56,11 @@ const TrainSearchResults: React.FC = () => {
   }, []);
 
 
- 
+  const handleDateChange = (date: string) => {
+    setSelectedDate(date);
+    
+
+  };
 
   return (
     <div className="bg-[#F5F5F5] min-h-screen w-full flex flex-col md:flex-row">
