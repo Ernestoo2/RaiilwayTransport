@@ -134,16 +134,3 @@ export interface TravelFormState extends Omit<TravelRoute, 'id'> {
     passengerCount: PassengerCount;
 }
 
-export interface PaymentMethod {
-    id: number;
-    name: string;
-    icon: string; // URL or icon component
-    description: string;
-    isSelected: boolean;
-  }
-  
-  export interface PaymentProps {
-    methods: PaymentMethod[];
-    onMethodSelect: (id: number) => void;
-  }
-  

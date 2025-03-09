@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import vector from "../Assets/Vector.png";
 import { Link } from "react-router-dom";
 import { TrainDetails } from "../utils/types/types";
 
@@ -63,7 +64,9 @@ export const BookingRight: React.FC<TrainCardProps> = ({ train }) => {
           <div className="space-y-2">
             <div className="flex justify-between items-center">
               <p className="text-gray-600 text-sm flex gap-2">
-                <img src="/Assets/Vector.png" className="object-scale-down" alt="" />
+
+                <img src={vector} className="object-scale-down" alt="" />
+
                 50% off up to ₦100 | Use code <span className="font-medium">BOOKNOW</span>
               </p>
               <button
@@ -75,7 +78,9 @@ export const BookingRight: React.FC<TrainCardProps> = ({ train }) => {
             </div>
             <div className="flex justify-between items-center">
               <p className="text-gray-600 flex gap-2">
-                <img src="/Assets/Vector.png" className="object-scale-down" alt="" />
+
+                <img src={vector} className="object-scale-down" alt="" />
+
                 20% off | Use code <span className="font-medium">FIRSTTIME</span>
               </p>
               <button
@@ -92,7 +97,9 @@ export const BookingRight: React.FC<TrainCardProps> = ({ train }) => {
         <div className="bg-white p-4 rounded-lg shadow-md">
 
           <h3 className="text-lg font-semibold flex gap-2 text-gray-800 mb-2">
-            <img src="/Assets/Vector.png" className="object-scale-down" alt="" />
+
+            <img src={vector} className="object-scale-down" alt="" />
+
             Apply Code</h3>
           <div className="flex w-full items-center gap-4">
             <input

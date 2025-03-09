@@ -1,6 +1,13 @@
 import React from "react";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 
+=======
+import train from "../Assets/Train1.png";
+import { Link } from "react-router-dom";
+
+ 
+>>>>>>> c5ac88b (Trials)
 const BookingInterface: React.FC = () => {
   return (
     <div className=" flex flex-col md:flex-row md:items-center md:justify-between max-w-5xl w-full mx-auto p-6 rounded-lg shadow-md h-auto">
@@ -73,7 +80,11 @@ const BookingInterface: React.FC = () => {
       {/* Right Side: Image Placeholder */}
       <div className="mt-6 md:mt-0 md:ml-8 md:w-1/2">
         <div className="w-full h-64 bg-gray-300 rounded-lg flex items-center justify-center">
+<<<<<<< HEAD
           <img src="/Assets/Train1.png" className="w-full h-full rounded-md object-cover" alt="" />        </div>
+=======
+          <img src={train} className="w-full h-full rounded-md object-cover" alt="" />        </div>
+>>>>>>> c5ac88b (Trials)
       </div>
     </div>
   );

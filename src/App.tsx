@@ -16,8 +16,13 @@ import { SetPasswordUi } from "./ui/Login/SetPassWordUi";
 import { trainData } from "./utils/api";
 
 function App() {
+
+  
+
   return (
-    <BrowserRouter>
+    <>
+       <BrowserRouter>
+
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/review-booking" element={<ReviewBookingUi train={trainData[0]} />} />
@@ -34,7 +39,9 @@ function App() {
         <Route path="/place" element={<SkeletonScreenComponent />} />
       </Routes>
     </BrowserRouter>
-  );
+
+    </>
+  )
 }
 
-export default App;
+export default App

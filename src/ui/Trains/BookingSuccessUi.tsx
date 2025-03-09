@@ -1,7 +1,7 @@
 import BookingSuccess from "../../components/BookingSuccess";
 import FooterUi from "../Footer/FooterUi";
 import Header1Ui from "../Header/Header1Ui";
-import React, { Component } from "react";
+import { Component } from "react";
 
 export class BookingSuccessUi extends Component {
   render() {

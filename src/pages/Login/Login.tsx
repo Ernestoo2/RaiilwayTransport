@@ -1,3 +1,4 @@
+import Loginimg from "../../Assets/Loginpic.png";
 import React, { useState } from "react";
 import axios from "axios";
 import { FaApple, FaFacebookF, FaGoogle } from "react-icons/fa";
@@ -18,9 +19,21 @@ const Login: React.FC = () => {
       });
       console.log("Login Success:", response.data);
       // Handle successful login (e.g., redirect or update UI)
-    } catch (err: any) {
-      console.error("Login Error:", err.response?.data || err.message);
-      setError("Invalid email or password. Please try again.");
+
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        // Axios-specific error handling
+        console.error("Login Error:", err.response?.data || err.message);
+        setError("Invalid email or password. Please try again.");
+      } else if (err instanceof Error) {
+        // General error handling
+        console.error("Unexpected Error:", err.message);
+        setError("An unexpected error occurred. Please try again.");
+      } else {
+        console.error("Unknown Error:", err);
+        setError("Something went wrong. Please try again.");
+      }
+
     }
   };
 
@@ -148,7 +161,9 @@ const Login: React.FC = () => {
       {/* Right Side: Image */}
       <div className="mt-4 w-full h-auto   mx-auto  md:mt-0 md:ml-8 md:w-1/2">
         <div className="w-full h-auto  rounded-lg flex items-center justify-center">
-          <img src="/Assets/Loginpic.png"
+
+          <img src={Loginimg}
+
             className="w-2/3 md:w-full h-auto rounded-lg shadow-md"
             alt="" />
         </div>

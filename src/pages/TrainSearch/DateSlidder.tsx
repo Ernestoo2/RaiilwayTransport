@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
-const DateSlider: React.FC = () => {
+interface DateSliderProps {
+  onDateChange: (date: string) => void;
+}
+const DateSlider: React.FC<DateSliderProps> = ({ onDateChange }) => {
+
   const dates = ["Tue 15", "Wed 16", "Thu 17", "Fri 18", 
     "Sat 19", "Sun 20", "Mon 21", "Tue 22", "Wed 23", "Thu 24", "Fri 25", "Sat 26", "Sun 27", "Mon 28", "Tue 29", "Wed 30"];
   const [selectedDate, setSelectedDate] = useState<string>("Wed 16");
@@ -9,6 +13,8 @@ const DateSlider: React.FC = () => {
 
   const handleDateChange = (date: string) => {
     setSelectedDate(date);
+    onDateChange(date);
+
   };
 
   const handlePrev = () => {

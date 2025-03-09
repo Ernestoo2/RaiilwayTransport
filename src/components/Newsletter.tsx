@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import mail from "../Assets/mailbox.png";
 import { IoIosSend } from "react-icons/io";
 
 function Newsletter() {
@@ -64,7 +65,9 @@ function Newsletter() {
                 </div>
                 <div className="w-2/3 md:w-1/2 flex justify-center items-center">
                     <img
-                        src="/Assets/mailbox.png"
+
+                        src={mail}
+
                         alt="Mailbox"
                         className="w-full h-auto md:max-w-md object-contain"
                     />

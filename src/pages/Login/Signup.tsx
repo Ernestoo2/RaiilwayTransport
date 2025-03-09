@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import sign from "../../Assets/Signup.png";
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -20,65 +21,64 @@ const SignUp: React.FC = () => {
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
+  
+    // Clear previous messages
+    setErrorMessage("");
+    setSuccessMessage("");
+  
     // Basic validation
-    if (!isAgreed) {
-      setErrorMessage("You must agree to the terms and privacy policy.");
-      return;
-    }
-    if (password !== confirmPassword) {
-      setErrorMessage("Passwords do not match.");
-      return;
-    }
-
-    // Prepare data payload for API call
-    const payload = {
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      password,
-    };
-
+    if (!isAgreed) return setErrorMessage("You must agree to the terms and privacy policy.");
+    if (password !== confirmPassword) return setErrorMessage("Passwords do not match.");
+  
+    // Payload preparation
+    const payload = { firstName, lastName, email, phoneNumber, password };
+  
     try {
-      // API call to send data to the server
       const response = await fetch("https://naijarails.onrender.com/SignUp", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-
+  
       const data = await response.json();
-
-      // Handle server response
-      if (response.ok) {
-        setSuccessMessage("Account created successfully!");
-        setErrorMessage("");
-        // Reset form fields
-        setFirstName("");
-        setLastName("");
-        setEmail("");
-        setPhoneNumber("");
-        setPassword("");
-        setConfirmPassword("");
-        setIsAgreed(false);
-      } else {
-        setErrorMessage(data.message || "Something went wrong. Please try again.");
-        setSuccessMessage("");
+  
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong. Please try again.");
       }
-    } catch (error) {
-      setErrorMessage("Failed to connect to the server. Please try again later.");
-      setSuccessMessage("");
+  
+      // Success handling
+      setSuccessMessage("Account created successfully!");
+      resetFormFields();
+  
+    } catch (err) {
+      if (err instanceof Error) {
+        setErrorMessage(err.message);
+      } else {
+        setErrorMessage("Failed to connect to the server. Please try again later.");
+      }
     }
   };
+  
+  // Helper function to reset form fields
+  const resetFormFields = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhoneNumber("");
+    setPassword("");
+    setConfirmPassword("");
+    setIsAgreed(false);
+  };
+
 
   return (
     <div className="flex w-5/6 flex-col   gap-5 mx-auto  md:flex-row items-center  justify-center min-h-screen ">
       {/* Image Section */}
       <div className="w-3/4 sm:w-2/3 sm: h-auto  flex justify-center items-center py-8 md:py-0">
         <img
-          src="/Assets/Signup.png"
+
+          src={sign}
+
           alt="Placeholder"
           className="rounded-lg w-3/4 h-full object-cover shadow-md"
         />

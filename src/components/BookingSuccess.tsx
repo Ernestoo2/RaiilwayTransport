@@ -1,3 +1,4 @@
+import QRcode from "../Assets/QRcode.png";
 import React, { useState } from "react";
 
 const BookingSuccess: React.FC = () => {
@@ -134,7 +135,10 @@ const BookingSuccess: React.FC = () => {
                     <div className="flex justify-center items-center">
                         <div className="w-32 h-32 bg-gray-200 rounded-md flex items-center justify-center">
                             {/* Placeholder for QR Code */}
-                            <img src="/Assets/QRcode.png" alt="" />
+
+                            <img src={QRcode} alt="" />
+                            {/*  */}
+
                         </div>
                     </div>
                     <p className="text-sm mt-4 text-center text-[#6B7280]">

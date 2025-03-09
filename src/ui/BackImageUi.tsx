@@ -1,5 +1,6 @@
-import BackImage, { BackImageData } from "../components/BackImage";
-import React, { Component } from "react";
+import BackImage from "../components/BackImage";
+import { Component } from "react";
+import { BackImageData } from "../components/constants";
 
 export class BackImageUi extends Component {
   render() {

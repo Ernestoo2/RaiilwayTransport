@@ -1,5 +1,12 @@
 import CardComponent, { CardData } from "../../components/CardComponent";
+import CardComponent from "../../components/CardComponent";
 import React, { Component } from "react";
+import { Component } from "react";
+import { CardData } from "../../components/constants";
+
+<<<<<<< HEAD
+=======
+>>>>>>> c5ac88b (Trials)
 
 // import CardComponent, { CardData } from "../components/CardComponent";
 
@@ -11,7 +18,9 @@ export class ReviewUi extends Component {
         <p className="text-xs font-serif">What people says about Globe facilities</p>
         
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-[30px] lg:p-0 mx-auto gap-6 p-4">
-        {CardData.map((card, index: any) => (
+
+        {CardData.map((card, index: number) => (
+
           <div
             key={card.id}
             className='relative w-full   mx-auto'
