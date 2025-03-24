@@ -1,9 +1,9 @@
-import React from "react";
+import {useState} from "react"
 import { FaCaretDown } from "react-icons/fa";
 import { SelectorProps, TripTypes } from "../../utils/types/types";
 
 const Tripselector = ({value, onChange} : SelectorProps) => {
-    const [isOpen, setIsOpen] = React.useState(false);
+    const [isOpen, setIsOpen] = useState(false);
   
     const tripOptions = Object.values(TripTypes);
 
@@ -28,7 +28,7 @@ const Tripselector = ({value, onChange} : SelectorProps) => {
                 <div
                 className="absolute left-0 z-10 mt-1 bg-white border-gray-200 rounded-md shadow-lg top-full "
                 >
-                    {tripOptions.map((option, index) => (
+                    {tripOptions.map((option) => (
                         <button
                         key={option}
                         onClick={() => {

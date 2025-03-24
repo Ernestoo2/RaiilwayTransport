@@ -1,7 +1,7 @@
 import Endside from "../../layouts/Header/Endside";
 import Logo from "../../layouts/Header/Logo";
 import Nav1 from "../../layouts/Header/Nav1";
-import React, { useState } from "react";
+import  { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 function Header1Ui() {

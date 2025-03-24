@@ -1,6 +1,5 @@
 import FooterUi from "../Footer/FooterUi";
-import Header1Ui from "../Header/Header1Ui";
-import React from "react";
+import Header1Ui from "../Header/Header1Ui"; 
 import ReviewBooking from "../../components/ReviewBooking";
 import { TrainDetails } from "../../utils/types/types";
 

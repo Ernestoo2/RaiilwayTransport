@@ -36,7 +36,7 @@ export const FromToSelector = () => {
                     <div className="w-full p-2 md:p-4  grid grid-cols-2 gap-4">
                         <div className=" " >
                             <p className="text-xs text-[#79747E] mb-2"> From:</p>
-                            {cityOptions.map((city, index) => (
+                            {cityOptions.map((city) => (
                                 <button
                                     key={`from-${city}`}
                                     onClick={() => {
@@ -52,7 +52,7 @@ export const FromToSelector = () => {
                         </div>
                         <div className=" ">
                             <p className=" text-xs  text-[#79747E]  mb-2">To:</p>
-                            {shuffledCity.map((city, index) => (
+                            {shuffledCity.map((city) => (
                                 <button
                                     key={`to-${city}`}
                                     onClick={() => {

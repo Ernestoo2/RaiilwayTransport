@@ -1,5 +1,5 @@
 import "react-loading-skeleton/dist/skeleton.css";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 
 interface Post {

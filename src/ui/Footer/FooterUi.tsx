@@ -1,5 +1,4 @@
 import First from "../../layouts/Footer/First";
-import React from "react";
 
 function FooterUi() {
   return (

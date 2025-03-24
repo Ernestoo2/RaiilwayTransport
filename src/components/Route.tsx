@@ -1,4 +1,3 @@
-import React from "react";
 import Tripselector from "./RouteSelectors/Tripselector";
 import { RouteComponentProps } from "../utils/types/types";
 import { DateSelector } from "./RouteSelectors/DateSelector";

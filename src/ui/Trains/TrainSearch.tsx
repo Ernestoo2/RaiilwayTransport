@@ -1,6 +1,6 @@
 import FooterUi from "../Footer/FooterUi";
 import Header1Ui from "../Header/Header1Ui";
-import React, { Component } from "react";
+import  { Component } from "react";
 import TrainSearchResults from "../../pages/TrainSearch/TrainSearchResult";
 
 export class TrainSearch extends Component {

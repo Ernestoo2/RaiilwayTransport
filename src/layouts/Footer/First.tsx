@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaGithubSquare, FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin, FaSquareFacebook } from "react-icons/fa6";
 import { ImSkype } from "react-icons/im";

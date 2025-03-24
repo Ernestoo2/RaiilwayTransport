@@ -1,5 +1,5 @@
 import "../App.css";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Route from "../components/Route";
 import { FaPlane, FaTrain } from "react-icons/fa6";
 import { fetchTravelRoutes } from "../utils/api";

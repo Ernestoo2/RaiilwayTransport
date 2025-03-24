@@ -1,7 +1,7 @@
 import DateSlider from "./DateSlidder";
-import React, { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import search from "../../Assets/Searchpic.png";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getTrainDetails } from "../../utils/api";
 import { TrainDetails } from "../../utils/types/types";
@@ -92,6 +92,7 @@ const TrainSearchResults: React.FC = () => {
         </div>
 
         <DateSlider onDateChange={handleDateChange} />
+        <p className="text-sm text-[#6B7280] mt-4">Selected Date: {selectedDate}</p>
         <div className="mb-6">
           <img src={search} alt="Train Planning" className="w-full h-auto mb-4 rounded-md" />
           <p className="text-sm font-medium">Planning your holidays?</p>
