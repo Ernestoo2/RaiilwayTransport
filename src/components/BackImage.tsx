@@ -1,35 +1,13 @@
 import "../App.css";
-import React from "react";
 import { IoIosSend } from "react-icons/io";
 import { Link } from "react-router-dom";
-
-interface BackImageProps {
-  id: number;
-  location: string;
-  description: string;
-  src: string;
-}
-
-export const BackImageData: BackImageProps[] = [
-  {
-    id: 1,
-    location: "Lagos",
-    description: "Search Trains & Places Bookings to our most popular destinations",
-    src: "/Assets/back1.png",
-  },
-  {
-    id: 2,
-    location: "Abuja",
-    description: "Search Trains & Places Bookings to our most popular destinations",
-    src: "/Assets/back2.png",
-  },
-];
+import { BackImageProps } from "./constants";
 
 export default function BackImage({ location, description, src }: BackImageProps) {
   return (
     <div
 
-      className="w-full mx-auto rounded-md cursor-pointer imgWrap h-70"
+      className="imgWrap w-full cursor-pointer h-70 rounded-md mx-auto"
 
       data-src={src}
       style={{
@@ -41,8 +19,8 @@ export default function BackImage({ location, description, src }: BackImageProps
       }}
     >
       <div className="mt-32">
-        <h1 className="text-lg font-bold text-white">{location}</h1>
-        <p className="text-sm font-semibold text-white">{description}</p>
+        <h1 className="text-white font-bold text-lg">{location}</h1>
+        <p className="text-white font-semibold text-sm">{description}</p>
 
         <Link
           to="/train-search"

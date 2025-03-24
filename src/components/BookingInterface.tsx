@@ -2,6 +2,8 @@ import React from "react";
 import train from "../Assets/Train1.png";
 import { Link } from "react-router-dom";
 
+ 
+
 const BookingInterface: React.FC = () => {
   return (
     <div className="flex flex-col w-full h-auto max-w-5xl p-6 mx-auto rounded-lg shadow-md md:flex-row md:items-center md:justify-between">
@@ -73,9 +75,9 @@ const BookingInterface: React.FC = () => {
 
       {/* Right Side: Image Placeholder */}
       <div className="mt-6 md:mt-0 md:ml-8 md:w-1/2">
-        <div className="flex items-center justify-center w-full h-64 bg-gray-300 rounded-lg">
+        <div className="w-full h-64 bg-gray-300 rounded-lg flex items-center justify-center">
 
-          <img src={train} className="object-cover w-full h-full rounded-md" alt="" />        </div>
+          <img src={train} className="w-full h-full rounded-md object-cover" alt="" />        </div>
 
       </div>
     </div>

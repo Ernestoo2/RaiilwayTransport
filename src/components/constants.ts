@@ -1,7 +1,7 @@
 import Review1 from "../Assets/Review1.png";
 import Review2 from "../Assets/Review2.png";
 import Review3 from "../Assets/Review3.png";
-import back1 from "../Assets/back1.png";
+import back1 from "/Assets/back1.png";
 import back2 from "../Assets/back2.png";
 
 export const IMAGES = { Review1, Review2, Review3, back1, back2 };
