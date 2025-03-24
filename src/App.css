@@ -1,6 +1,7 @@
+@import "tailwindcss";
 .bg-container {
   position: relative;
-  background-image: url("/public/Assets/BackG.png");
+  background-image: url("/Assets/BackG.png");
   background-size: cover;
   background-position: center;
   min-height: 50px;
@@ -40,12 +41,12 @@
   background-image: var(--image-src, none);
 }
 
-.imgWrap[data-src="/public/Assets/back1.png"] {
-  --image-src: url("/public/Assets/back1.png");
+.imgWrap[data-src="/Assets/back1.png"] {
+  --image-src: url("/Assets/back1.png");
 }
 
-.imgWrap[data-src="/public/Assets/back2.png"] {
-  --image-src: url("/public/Assets/back2.png");
+.imgWrap[data-src="/Assets/back2.png"] {
+  --image-src: url("/Assets/back2.png");
 }
 
 .content {
@@ -57,4 +58,4 @@
   justify-items: center;
 }
 
-@import "tailwindcss "
+  
