@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 const BookingInterface: React.FC = () => {
   return (
-    <div className=" flex flex-col md:flex-row md:items-center md:justify-between max-w-5xl w-full mx-auto p-6 rounded-lg shadow-md h-auto">
+    <div className="flex flex-col w-full h-auto max-w-5xl p-6 mx-auto rounded-lg shadow-md md:flex-row md:items-center md:justify-between">
       {/* Left Side: Text and Inputs */}
-      <div className="md:w-1/2 space-y-6">
+      <div className="space-y-6 md:w-1/2">
         <div className="w-[163px] justify-center text-center ">
           <h2 className="bg-[#07561A] text-sm  text-white w-full h-auto rounded-lg py-1 mx-auto">
             Hello Travellers
@@ -25,7 +25,7 @@ const BookingInterface: React.FC = () => {
         </p>
 
         {/* Input Section */}
-        <div className=" grid gap-5 grid-cols-2 justify-center items-center ">
+        <div className="grid items-center justify-center grid-cols-2 gap-5 ">
           <div>
             <label
               htmlFor="departure"
@@ -36,7 +36,7 @@ const BookingInterface: React.FC = () => {
             <input
               type="text"
               id="departure"
-              className="w-full border-b-2 border-x-0 border-t-0 focus:outline-none focus:border-green-600"
+              className="w-full border-t-0 border-b-2 border-x-0 focus:outline-none focus:border-green-600"
               placeholder="Elelewon Railway Station"
             />
           </div>
@@ -47,7 +47,7 @@ const BookingInterface: React.FC = () => {
             <input
               type="text"
               id="arrival"
-              className="w-full border-b-2 border-x-0 border-t-0 focus:outline-none focus:border-green-600"
+              className="w-full border-t-0 border-b-2 border-x-0 focus:outline-none focus:border-green-600"
               placeholder="Umuahia Junction"
             />
           </div>
@@ -60,14 +60,14 @@ const BookingInterface: React.FC = () => {
               id="date"
               value={new Date().toISOString().split("T")[0]}
               placeholder="Wed, 16 Nov 2022"
-              className="w-full border-b-2 text-gray-500 border-x-0 border-t-0 focus:outline-none focus:border-green-600"
+              className="w-full text-gray-500 border-t-0 border-b-2 border-x-0 focus:outline-none focus:border-green-600"
             />
           </div>
         </div>
 
         {/* Search Button */}
-        <div className="w-full flex text-center items-center mx-auto">
-          <Link to="/train-search" className="bg-green-600 w-full text-white py-3 px-6 rounded-md hover:bg-green-700 transition">
+        <div className="flex items-center w-full mx-auto text-center">
+          <Link to="/train-search" className="w-full px-6 py-3 text-white transition bg-green-600 rounded-md hover:bg-green-700">
             Search for trains
           </Link>
         </div>
